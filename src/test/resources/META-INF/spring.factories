@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    io.knetwork.group.config.TestContainersSpringContextCustomizerFactory
