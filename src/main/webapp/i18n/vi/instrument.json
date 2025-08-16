@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "instrument": {
+      "home": {
+        "title": "Instruments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Instrument",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Instrument",
+        "notFound": "No Instruments found"
+      },
+      "created": "Một Instrument mới được tạo với định danh {{ param }}",
+      "updated": "Một Instrument cập nhật với định danh {{ param }}",
+      "deleted": "Một Instrument đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Instrument {{ id }}?"
+      },
+      "detail": {
+        "title": "Instrument"
+      },
+      "id": "ID",
+      "name": "Name",
+      "broker": "Broker"
+    }
+  }
+}

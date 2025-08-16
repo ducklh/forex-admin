@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (paymentMethod(); as paymentMethodRef) {
+      <div>
+        <h2 data-cy="paymentMethodDetailsHeading"><span jhiTranslate="forexBeApp.paymentMethod.detail.title">Payment Method</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ paymentMethodRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.paymentMethod.name">Name</span></dt>
+          <dd>
+            <span>{{ paymentMethodRef.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.paymentMethod.broker">Broker</span></dt>
+          <dd>
+            @if (paymentMethod()!.broker) {
+              <div>
+                <a [routerLink]="['/broker', paymentMethod()!.broker?.id, 'view']">{{ paymentMethodRef.broker?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/payment-method', paymentMethodRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

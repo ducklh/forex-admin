@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "pro": {
+      "home": {
+        "title": "Pros",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Pro",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Pro",
+        "notFound": "No Pros found"
+      },
+      "created": "Một Pro mới được tạo với định danh {{ param }}",
+      "updated": "Một Pro cập nhật với định danh {{ param }}",
+      "deleted": "Một Pro đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Pro {{ id }}?"
+      },
+      "detail": {
+        "title": "Pro"
+      },
+      "id": "ID",
+      "text": "Text",
+      "broker": "Broker"
+    }
+  }
+}

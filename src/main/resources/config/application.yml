@@ -90,7 +90,7 @@ management:
 
 mongock:
   migration-scan-package:
-    - io.knetwork.group.config.dbmigrations
+    - com.knetwork.forex.config.dbmigrations
 
 spring:
   application:

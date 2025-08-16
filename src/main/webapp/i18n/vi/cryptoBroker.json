@@ -1,0 +1,44 @@
+{
+  "forexBeApp": {
+    "cryptoBroker": {
+      "home": {
+        "title": "Crypto Brokers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Crypto Broker",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Crypto Broker",
+        "notFound": "No Crypto Brokers found"
+      },
+      "created": "Một Crypto Broker mới được tạo với định danh {{ param }}",
+      "updated": "Một Crypto Broker cập nhật với định danh {{ param }}",
+      "deleted": "Một Crypto Broker đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Crypto Broker {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Broker"
+      },
+      "id": "ID",
+      "name": "Name",
+      "logo": "Logo",
+      "url": "Url",
+      "description": "Description",
+      "rating": "Rating",
+      "features": "Features",
+      "regulation": "Regulation",
+      "minDeposit": "Min Deposit",
+      "tradingFees": "Trading Fees",
+      "supportedCoins": "Supported Coins",
+      "pros": "Pros",
+      "cons": "Cons",
+      "founded": "Founded",
+      "headquarters": "Headquarters",
+      "tradingVolume": "Trading Volume",
+      "securityFeatures": "Security Features",
+      "paymentMethods": "Payment Methods",
+      "customerSupport": "Customer Support",
+      "mobileApp": "Mobile App",
+      "apiSupport": "Api Support",
+      "detailedDescription": "Detailed Description"
+    }
+  }
+}

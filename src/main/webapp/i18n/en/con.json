@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "con": {
+      "home": {
+        "title": "Cons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Con",
+        "createOrEditLabel": "Create or edit a Con",
+        "notFound": "No Cons found"
+      },
+      "created": "A new Con is created with identifier {{ param }}",
+      "updated": "A Con is updated with identifier {{ param }}",
+      "deleted": "A Con is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Con {{ id }}?"
+      },
+      "detail": {
+        "title": "Con"
+      },
+      "id": "ID",
+      "text": "Text",
+      "broker": "Broker"
+    }
+  }
+}

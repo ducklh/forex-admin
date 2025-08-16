@@ -1,0 +1,42 @@
+{
+  "forexBeApp": {
+    "broker": {
+      "home": {
+        "title": "Brokers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Broker",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Broker",
+        "notFound": "No Brokers found"
+      },
+      "created": "Một Broker mới được tạo với định danh {{ param }}",
+      "updated": "Một Broker cập nhật với định danh {{ param }}",
+      "deleted": "Một Broker đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Broker {{ id }}?"
+      },
+      "detail": {
+        "title": "Broker"
+      },
+      "id": "ID",
+      "name": "Name",
+      "logo": "Logo",
+      "url": "Url",
+      "description": "Description",
+      "rating": "Rating",
+      "minDeposit": "Min Deposit",
+      "spreads": "Spreads",
+      "leverage": "Leverage",
+      "founded": "Founded",
+      "headquarters": "Headquarters",
+      "features": "Features",
+      "regulations": "Regulations",
+      "platforms": "Platforms",
+      "instruments": "Instruments",
+      "pros": "Pros",
+      "cons": "Cons",
+      "languages": "Languages",
+      "supports": "Supports",
+      "paymentMethods": "Payment Methods"
+    }
+  }
+}

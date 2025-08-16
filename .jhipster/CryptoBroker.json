@@ -1,0 +1,98 @@
+{
+  "annotations": {
+    "changelogDate": "20250814155108"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "logo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "features",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "regulation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "minDeposit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tradingFees",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "supportedCoins",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "pros",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "cons",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "founded",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "headquarters",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tradingVolume",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "securityFeatures",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "paymentMethods",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "customerSupport",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "mobileApp",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "apiSupport",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "detailedDescription",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "name": "CryptoBroker",
+  "relationships": [],
+  "searchEngine": "no"
+}

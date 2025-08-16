@@ -1,0 +1,97 @@
+<div>
+  <h2 id="page-heading" data-cy="ProHeading">
+    <span jhiTranslate="forexBeApp.pro.home.title">Pros</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="forexBeApp.pro.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-pro"
+        [routerLink]="['/pro/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="forexBeApp.pro.home.createLabel">Create a new Pro</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (pros().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="forexBeApp.pro.home.notFound">No Pros found</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="text">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.pro.text">Text</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="broker.id">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.pro.broker">Broker</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (pro of pros(); track trackId(pro)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/pro', pro.id, 'view']">{{ pro.id }}</a>
+              </td>
+              <td>{{ pro.text }}</td>
+              <td>
+                @if (pro.broker) {
+                  <div>
+                    <a [routerLink]="['/broker', pro.broker.id, 'view']">{{ pro.broker.id }}</a>
+                  </div>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/pro', pro.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a [routerLink]="['/pro', pro.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(pro)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

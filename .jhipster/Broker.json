@@ -1,0 +1,107 @@
+{
+  "annotations": {
+    "changelogDate": "20250814153451"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "logo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "minDeposit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "spreads",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "leverage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "founded",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "headquarters",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Broker",
+  "relationships": [
+    {
+      "otherEntityName": "feature",
+      "relationshipName": "features",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "regulation",
+      "relationshipName": "regulations",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "platform",
+      "relationshipName": "platforms",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "instrument",
+      "relationshipName": "instruments",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "pro",
+      "relationshipName": "pros",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "con",
+      "relationshipName": "cons",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "language",
+      "relationshipName": "languages",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "support",
+      "relationshipName": "supports",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "paymentMethod",
+      "relationshipName": "paymentMethods",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20250814153456"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "text",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Pro",
+  "relationships": [],
+  "searchEngine": "no"
+}

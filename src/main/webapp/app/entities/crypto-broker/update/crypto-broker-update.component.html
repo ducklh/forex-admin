@@ -1,0 +1,248 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-crypto-broker-heading"
+        data-cy="CryptoBrokerCreateUpdateHeading"
+        jhiTranslate="forexBeApp.cryptoBroker.home.createOrEditLabel"
+      >
+        Create or edit a Crypto Broker
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="forexBeApp.cryptoBroker.id">ID</label>
+            <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        @let nameRef = editForm.get('name')!;
+        <div class="mb-3">
+          <label class="form-label" for="field_name" jhiTranslate="forexBeApp.cryptoBroker.name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+          @if (nameRef.invalid && (nameRef.dirty || nameRef.touched)) {
+            <div>
+              @if (editForm.get('name')?.errors?.required) {
+                <small class="form-text text-danger" jhiTranslate="entity.validation.required">This field is required.</small>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_logo" jhiTranslate="forexBeApp.cryptoBroker.logo">Logo</label>
+          <input type="text" class="form-control" name="logo" id="field_logo" data-cy="logo" formControlName="logo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_url" jhiTranslate="forexBeApp.cryptoBroker.url">Url</label>
+          <input type="text" class="form-control" name="url" id="field_url" data-cy="url" formControlName="url" />
+        </div>
+
+        @let descriptionRef = editForm.get('description')!;
+        <div class="mb-3">
+          <label class="form-label" for="field_description" jhiTranslate="forexBeApp.cryptoBroker.description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+          @if (descriptionRef.invalid && (descriptionRef.dirty || descriptionRef.touched)) {
+            <div>
+              @if (editForm.get('description')?.errors?.maxlength) {
+                <small class="form-text text-danger" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: '500' }"
+                  >This field cannot be longer than 500 characters.</small
+                >
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_rating" jhiTranslate="forexBeApp.cryptoBroker.rating">Rating</label>
+          <input type="number" class="form-control" name="rating" id="field_rating" data-cy="rating" formControlName="rating" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_features" jhiTranslate="forexBeApp.cryptoBroker.features">Features</label>
+          <textarea class="form-control" name="features" id="field_features" data-cy="features" formControlName="features"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_regulation" jhiTranslate="forexBeApp.cryptoBroker.regulation">Regulation</label>
+          <input
+            type="text"
+            class="form-control"
+            name="regulation"
+            id="field_regulation"
+            data-cy="regulation"
+            formControlName="regulation"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_minDeposit" jhiTranslate="forexBeApp.cryptoBroker.minDeposit">Min Deposit</label>
+          <input
+            type="text"
+            class="form-control"
+            name="minDeposit"
+            id="field_minDeposit"
+            data-cy="minDeposit"
+            formControlName="minDeposit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tradingFees" jhiTranslate="forexBeApp.cryptoBroker.tradingFees">Trading Fees</label>
+          <input
+            type="text"
+            class="form-control"
+            name="tradingFees"
+            id="field_tradingFees"
+            data-cy="tradingFees"
+            formControlName="tradingFees"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_supportedCoins" jhiTranslate="forexBeApp.cryptoBroker.supportedCoins">Supported Coins</label>
+          <textarea
+            class="form-control"
+            name="supportedCoins"
+            id="field_supportedCoins"
+            data-cy="supportedCoins"
+            formControlName="supportedCoins"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_pros" jhiTranslate="forexBeApp.cryptoBroker.pros">Pros</label>
+          <textarea class="form-control" name="pros" id="field_pros" data-cy="pros" formControlName="pros"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cons" jhiTranslate="forexBeApp.cryptoBroker.cons">Cons</label>
+          <textarea class="form-control" name="cons" id="field_cons" data-cy="cons" formControlName="cons"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_founded" jhiTranslate="forexBeApp.cryptoBroker.founded">Founded</label>
+          <input type="text" class="form-control" name="founded" id="field_founded" data-cy="founded" formControlName="founded" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_headquarters" jhiTranslate="forexBeApp.cryptoBroker.headquarters">Headquarters</label>
+          <input
+            type="text"
+            class="form-control"
+            name="headquarters"
+            id="field_headquarters"
+            data-cy="headquarters"
+            formControlName="headquarters"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tradingVolume" jhiTranslate="forexBeApp.cryptoBroker.tradingVolume">Trading Volume</label>
+          <input
+            type="text"
+            class="form-control"
+            name="tradingVolume"
+            id="field_tradingVolume"
+            data-cy="tradingVolume"
+            formControlName="tradingVolume"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_securityFeatures" jhiTranslate="forexBeApp.cryptoBroker.securityFeatures"
+            >Security Features</label
+          >
+          <textarea
+            class="form-control"
+            name="securityFeatures"
+            id="field_securityFeatures"
+            data-cy="securityFeatures"
+            formControlName="securityFeatures"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_paymentMethods" jhiTranslate="forexBeApp.cryptoBroker.paymentMethods">Payment Methods</label>
+          <textarea
+            class="form-control"
+            name="paymentMethods"
+            id="field_paymentMethods"
+            data-cy="paymentMethods"
+            formControlName="paymentMethods"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customerSupport" jhiTranslate="forexBeApp.cryptoBroker.customerSupport"
+            >Customer Support</label
+          >
+          <textarea
+            class="form-control"
+            name="customerSupport"
+            id="field_customerSupport"
+            data-cy="customerSupport"
+            formControlName="customerSupport"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_mobileApp" jhiTranslate="forexBeApp.cryptoBroker.mobileApp">Mobile App</label>
+          <input type="checkbox" class="form-check" name="mobileApp" id="field_mobileApp" data-cy="mobileApp" formControlName="mobileApp" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_apiSupport" jhiTranslate="forexBeApp.cryptoBroker.apiSupport">Api Support</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="apiSupport"
+            id="field_apiSupport"
+            data-cy="apiSupport"
+            formControlName="apiSupport"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_detailedDescription" jhiTranslate="forexBeApp.cryptoBroker.detailedDescription"
+            >Detailed Description</label
+          >
+          <textarea
+            class="form-control"
+            name="detailedDescription"
+            id="field_detailedDescription"
+            data-cy="detailedDescription"
+            formControlName="detailedDescription"
+          ></textarea>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

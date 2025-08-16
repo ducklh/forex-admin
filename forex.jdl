@@ -1,0 +1,41 @@
+entity ForexBroker {
+    name String required,
+  logo String,
+  url String,
+  description TextBlob,
+  rating BigDecimal,
+  regulation String,
+  minDeposit String,
+  spreads String,
+  leverage String,
+  founded String,
+  headquarters String
+}
+enum Feature {
+    LOW_SPREAD, DEMO_ACCOUNT, COPY_TRADING, FREE_EDUCATION, SOCIAL_TRADING, API_TRADING, INSTANT_WITHDRAWALS, BONUS_PROGRAMS
+}
+enum Platform {
+    MT4, MT5, CTRADER, WEBTRADER, MOBILE, PROPRIETARY
+}
+enum Instrument {
+    FOREX, CFD, CRYPTO, METALS, INDICES, STOCKS, BONDS, ENERGY, OPTIONS, ETF
+}
+enum Language {
+    VIETNAMESE, ENGLISH, CHINESE, ARABIC, JAPANESE, RUSSIAN, THAI, GERMAN, SPANISH
+}
+enum Support {
+    LIVE_CHAT, EMAIL, PHONE, WHATSAPP, TELEGRAM
+}
+enum PaymentMethod {
+    BANK_TRANSFER, CREDIT_CARD, PAYPAL, SKRILL, NETELLER, BITCOIN, PERFECT_MONEY
+}
+enum Pros {
+    LOW_SPREADS, FAST_WITHDRAWALS, UNLIMITED_DEMO, STABLE_PLATFORM, COPY_TRADING, HIGH_LEVERAGE, BONUS, SOCIAL_TRADING, OPTIONS_TRADING, DIVERSE_PRODUCTS
+}
+enum Cons {
+    HIGH_SWAP_FEES, NO_STOCK_TRADING, TRADE_VOLUME_LIMITS, HIGH_MIN_DEPOSIT, NO_VIETNAMESE_SUPPORT, HIGH_FEES, LIMITED_RESEARCH, WEAK_REGULATION, LIMITED_PRODUCTS
+}
+/* Quan hệ nhiều-nhiều với enum */
+relationship ManyToMany {
+    ForexBroker{features} to Feature , ForexBroker{platforms} to Platform , ForexBroker{instruments} to Instrument , ForexBroker{pros} to Pros , ForexBroker{cons} to Cons , ForexBroker{languages} to Language , ForexBroker{support} to Support , ForexBroker{paymentMethods} to PaymentMethod
+}

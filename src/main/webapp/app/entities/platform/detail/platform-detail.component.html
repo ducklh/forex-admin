@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (platform(); as platformRef) {
+      <div>
+        <h2 data-cy="platformDetailsHeading"><span jhiTranslate="forexBeApp.platform.detail.title">Platform</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ platformRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.platform.name">Name</span></dt>
+          <dd>
+            <span>{{ platformRef.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.platform.broker">Broker</span></dt>
+          <dd>
+            @if (platform()!.broker) {
+              <div>
+                <a [routerLink]="['/broker', platform()!.broker?.id, 'view']">{{ platformRef.broker?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/platform', platformRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "pro": {
+      "home": {
+        "title": "Pros",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Pro",
+        "createOrEditLabel": "Create or edit a Pro",
+        "notFound": "No Pros found"
+      },
+      "created": "A new Pro is created with identifier {{ param }}",
+      "updated": "A Pro is updated with identifier {{ param }}",
+      "deleted": "A Pro is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pro {{ id }}?"
+      },
+      "detail": {
+        "title": "Pro"
+      },
+      "id": "ID",
+      "text": "Text",
+      "broker": "Broker"
+    }
+  }
+}

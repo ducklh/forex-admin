@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (regulation(); as regulationRef) {
+      <div>
+        <h2 data-cy="regulationDetailsHeading"><span jhiTranslate="forexBeApp.regulation.detail.title">Regulation</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ regulationRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.regulation.authority">Authority</span></dt>
+          <dd>
+            <span>{{ regulationRef.authority }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.regulation.broker">Broker</span></dt>
+          <dd>
+            @if (regulation()!.broker) {
+              <div>
+                <a [routerLink]="['/broker', regulation()!.broker?.id, 'view']">{{ regulationRef.broker?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/regulation', regulationRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

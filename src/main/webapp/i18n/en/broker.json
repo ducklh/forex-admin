@@ -1,0 +1,42 @@
+{
+  "forexBeApp": {
+    "broker": {
+      "home": {
+        "title": "Brokers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Broker",
+        "createOrEditLabel": "Create or edit a Broker",
+        "notFound": "No Brokers found"
+      },
+      "created": "A new Broker is created with identifier {{ param }}",
+      "updated": "A Broker is updated with identifier {{ param }}",
+      "deleted": "A Broker is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Broker {{ id }}?"
+      },
+      "detail": {
+        "title": "Broker"
+      },
+      "id": "ID",
+      "name": "Name",
+      "logo": "Logo",
+      "url": "Url",
+      "description": "Description",
+      "rating": "Rating",
+      "minDeposit": "Min Deposit",
+      "spreads": "Spreads",
+      "leverage": "Leverage",
+      "founded": "Founded",
+      "headquarters": "Headquarters",
+      "features": "Features",
+      "regulations": "Regulations",
+      "platforms": "Platforms",
+      "instruments": "Instruments",
+      "pros": "Pros",
+      "cons": "Cons",
+      "languages": "Languages",
+      "supports": "Supports",
+      "paymentMethods": "Payment Methods"
+    }
+  }
+}

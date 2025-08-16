@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "con": {
+      "home": {
+        "title": "Cons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Con",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Con",
+        "notFound": "No Cons found"
+      },
+      "created": "Một Con mới được tạo với định danh {{ param }}",
+      "updated": "Một Con cập nhật với định danh {{ param }}",
+      "deleted": "Một Con đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Con {{ id }}?"
+      },
+      "detail": {
+        "title": "Con"
+      },
+      "id": "ID",
+      "text": "Text",
+      "broker": "Broker"
+    }
+  }
+}

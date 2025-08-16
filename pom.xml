@@ -3,7 +3,7 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.knetwork.group</groupId>
+    <groupId>com.knetwork.forex</groupId>
     <artifactId>forex-be</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -31,7 +31,7 @@
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <start-class>io.knetwork.group.ForexBeApp</start-class>
+        <start-class>com.knetwork.forex.ForexBeApp</start-class>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx1G</argLine>
         <m2e.apt.activation>jdt_apt</m2e.apt.activation>
         <run.addResources>false</run.addResources>
@@ -968,11 +968,12 @@
                                 <fileSet>
                                     <directory>${project.basedir}</directory>
                                     <includes>
-                                        <include>.postcss.config.js</include>
+                                        <include>angular.json</include>
                                         <include>package-lock.json</include>
                                         <include>package.json</include>
                                         <include>src/main/webapp/**/*.*</include>
                                         <include>target/classes/static/**/*.*</include>
+                                        <include>tsconfig.app.json</include>
                                         <include>tsconfig.json</include>
                                         <include>webpack/**/*.*</include>
                                     </includes>

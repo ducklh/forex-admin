@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "support": {
+      "home": {
+        "title": "Supports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Support",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Support",
+        "notFound": "No Supports found"
+      },
+      "created": "Một Support mới được tạo với định danh {{ param }}",
+      "updated": "Một Support cập nhật với định danh {{ param }}",
+      "deleted": "Một Support đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Support {{ id }}?"
+      },
+      "detail": {
+        "title": "Support"
+      },
+      "id": "ID",
+      "type": "Type",
+      "broker": "Broker"
+    }
+  }
+}

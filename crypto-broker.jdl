@@ -1,0 +1,23 @@
+entity CryptoBroker {
+    name String required,
+  logo String,
+  url String,
+  description String maxlength(500),
+  rating BigDecimal,
+  features TextBlob, // danh sách string
+  regulation String,
+  minDeposit String,
+  tradingFees String,
+  supportedCoins TextBlob, // danh sách string
+  pros TextBlob, // danh sách string
+  cons TextBlob, // danh sách string
+  founded String,
+  headquarters String,
+  tradingVolume String,
+  securityFeatures TextBlob, // danh sách string
+  paymentMethods TextBlob, // danh sách string
+  customerSupport TextBlob, // danh sách string
+  mobileApp Boolean,
+  apiSupport Boolean,
+  detailedDescription TextBlob
+}

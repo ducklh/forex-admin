@@ -1,0 +1,244 @@
+<div>
+  <h2 id="page-heading" data-cy="CryptoBrokerHeading">
+    <span jhiTranslate="forexBeApp.cryptoBroker.home.title">Crypto Brokers</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="forexBeApp.cryptoBroker.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-crypto-broker"
+        [routerLink]="['/crypto-broker/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="forexBeApp.cryptoBroker.home.createLabel">Create a new Crypto Broker</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (cryptoBrokers().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="forexBeApp.cryptoBroker.home.notFound">No Crypto Brokers found</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="name">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.name">Name</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="logo">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.logo">Logo</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="url">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.url">Url</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="description">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.description">Description</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="rating">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.rating">Rating</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="features">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.features">Features</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="regulation">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.regulation">Regulation</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="minDeposit">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.minDeposit">Min Deposit</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tradingFees">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.tradingFees">Trading Fees</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="supportedCoins">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.supportedCoins">Supported Coins</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="pros">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.pros">Pros</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cons">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.cons">Cons</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="founded">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.founded">Founded</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="headquarters">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.headquarters">Headquarters</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tradingVolume">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.tradingVolume">Trading Volume</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="securityFeatures">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.securityFeatures">Security Features</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="paymentMethods">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.paymentMethods">Payment Methods</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customerSupport">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.customerSupport">Customer Support</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="mobileApp">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.mobileApp">Mobile App</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="apiSupport">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.apiSupport">Api Support</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="detailedDescription">
+              <div class="d-flex">
+                <span jhiTranslate="forexBeApp.cryptoBroker.detailedDescription">Detailed Description</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (cryptoBroker of cryptoBrokers(); track trackId(cryptoBroker)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/crypto-broker', cryptoBroker.id, 'view']">{{ cryptoBroker.id }}</a>
+              </td>
+              <td>{{ cryptoBroker.name }}</td>
+              <td>{{ cryptoBroker.logo }}</td>
+              <td>{{ cryptoBroker.url }}</td>
+              <td>{{ cryptoBroker.description }}</td>
+              <td>{{ cryptoBroker.rating }}</td>
+              <td>{{ cryptoBroker.features }}</td>
+              <td>{{ cryptoBroker.regulation }}</td>
+              <td>{{ cryptoBroker.minDeposit }}</td>
+              <td>{{ cryptoBroker.tradingFees }}</td>
+              <td>{{ cryptoBroker.supportedCoins }}</td>
+              <td>{{ cryptoBroker.pros }}</td>
+              <td>{{ cryptoBroker.cons }}</td>
+              <td>{{ cryptoBroker.founded }}</td>
+              <td>{{ cryptoBroker.headquarters }}</td>
+              <td>{{ cryptoBroker.tradingVolume }}</td>
+              <td>{{ cryptoBroker.securityFeatures }}</td>
+              <td>{{ cryptoBroker.paymentMethods }}</td>
+              <td>{{ cryptoBroker.customerSupport }}</td>
+              <td>{{ cryptoBroker.mobileApp }}</td>
+              <td>{{ cryptoBroker.apiSupport }}</td>
+              <td>{{ cryptoBroker.detailedDescription }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/crypto-broker', cryptoBroker.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a [routerLink]="['/crypto-broker', cryptoBroker.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(cryptoBroker)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

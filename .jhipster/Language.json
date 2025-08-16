@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "changelogDate": "20250814153458"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Language",
+  "relationships": [],
+  "searchEngine": "no"
+}

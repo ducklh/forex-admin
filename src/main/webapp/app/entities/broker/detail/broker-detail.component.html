@@ -1,0 +1,70 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (broker(); as brokerRef) {
+      <div>
+        <h2 data-cy="brokerDetailsHeading"><span jhiTranslate="forexBeApp.broker.detail.title">Broker</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ brokerRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.name">Name</span></dt>
+          <dd>
+            <span>{{ brokerRef.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.logo">Logo</span></dt>
+          <dd>
+            <span>{{ brokerRef.logo }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.url">Url</span></dt>
+          <dd>
+            <span>{{ brokerRef.url }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.description">Description</span></dt>
+          <dd>
+            <span>{{ brokerRef.description }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.rating">Rating</span></dt>
+          <dd>
+            <span>{{ brokerRef.rating }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.minDeposit">Min Deposit</span></dt>
+          <dd>
+            <span>{{ brokerRef.minDeposit }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.spreads">Spreads</span></dt>
+          <dd>
+            <span>{{ brokerRef.spreads }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.leverage">Leverage</span></dt>
+          <dd>
+            <span>{{ brokerRef.leverage }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.founded">Founded</span></dt>
+          <dd>
+            <span>{{ brokerRef.founded }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.broker.headquarters">Headquarters</span></dt>
+          <dd>
+            <span>{{ brokerRef.headquarters }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/broker', brokerRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

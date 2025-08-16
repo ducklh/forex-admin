@@ -1,0 +1,43 @@
+entity Broker {
+    name String required,
+  logo String,
+  url String,
+  description TextBlob,
+  rating Double,
+  minDeposit BigDecimal,
+  spreads String,
+  leverage String,
+  founded Integer,
+  headquarters String
+}
+entity Feature {
+    name String required
+}
+entity Regulation {
+    authority String required
+}
+entity Platform {
+    name String required
+}
+entity Instrument {
+    name String required
+}
+entity Pro {
+    text String required
+}
+entity Con {
+    text String required
+}
+entity Language {
+    code String required,
+  name String required
+}
+entity Support {
+    type String required
+}
+entity PaymentMethod {
+    name String required
+}
+relationship OneToMany {
+    Broker{features} to Feature , Broker{regulations} to Regulation , Broker{platforms} to Platform , Broker{instruments} to Instrument , Broker{pros} to Pro , Broker{cons} to Con , Broker{languages} to Language , Broker{supports} to Support , Broker{paymentMethods} to PaymentMethod
+}

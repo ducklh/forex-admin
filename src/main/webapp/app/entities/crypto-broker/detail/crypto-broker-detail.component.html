@@ -1,0 +1,114 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cryptoBroker(); as cryptoBrokerRef) {
+      <div>
+        <h2 data-cy="cryptoBrokerDetailsHeading"><span jhiTranslate="forexBeApp.cryptoBroker.detail.title">Crypto Broker</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.name">Name</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.logo">Logo</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.logo }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.url">Url</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.url }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.description">Description</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.description }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.rating">Rating</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.rating }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.features">Features</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.features }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.regulation">Regulation</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.regulation }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.minDeposit">Min Deposit</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.minDeposit }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.tradingFees">Trading Fees</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.tradingFees }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.supportedCoins">Supported Coins</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.supportedCoins }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.pros">Pros</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.pros }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.cons">Cons</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.cons }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.founded">Founded</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.founded }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.headquarters">Headquarters</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.headquarters }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.tradingVolume">Trading Volume</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.tradingVolume }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.securityFeatures">Security Features</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.securityFeatures }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.paymentMethods">Payment Methods</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.paymentMethods }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.customerSupport">Customer Support</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.customerSupport }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.mobileApp">Mobile App</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.mobileApp }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.apiSupport">Api Support</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.apiSupport }}</span>
+          </dd>
+          <dt><span jhiTranslate="forexBeApp.cryptoBroker.detailedDescription">Detailed Description</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.detailedDescription }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/crypto-broker', cryptoBrokerRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

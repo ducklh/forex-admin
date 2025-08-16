@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "feature": {
+      "home": {
+        "title": "Features",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Feature",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Feature",
+        "notFound": "No Features found"
+      },
+      "created": "Một Feature mới được tạo với định danh {{ param }}",
+      "updated": "Một Feature cập nhật với định danh {{ param }}",
+      "deleted": "Một Feature đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Feature {{ id }}?"
+      },
+      "detail": {
+        "title": "Feature"
+      },
+      "id": "ID",
+      "name": "Name",
+      "broker": "Broker"
+    }
+  }
+}

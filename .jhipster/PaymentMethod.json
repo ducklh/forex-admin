@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20250814153500"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "PaymentMethod",
+  "relationships": [],
+  "searchEngine": "no"
+}

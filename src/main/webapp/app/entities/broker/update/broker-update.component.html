@@ -1,0 +1,114 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-broker-heading" data-cy="BrokerCreateUpdateHeading" jhiTranslate="forexBeApp.broker.home.createOrEditLabel">
+        Create or edit a Broker
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="forexBeApp.broker.id">ID</label>
+            <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        @let nameRef = editForm.get('name')!;
+        <div class="mb-3">
+          <label class="form-label" for="field_name" jhiTranslate="forexBeApp.broker.name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+          @if (nameRef.invalid && (nameRef.dirty || nameRef.touched)) {
+            <div>
+              @if (editForm.get('name')?.errors?.required) {
+                <small class="form-text text-danger" jhiTranslate="entity.validation.required">This field is required.</small>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_logo" jhiTranslate="forexBeApp.broker.logo">Logo</label>
+          <input type="text" class="form-control" name="logo" id="field_logo" data-cy="logo" formControlName="logo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_url" jhiTranslate="forexBeApp.broker.url">Url</label>
+          <input type="text" class="form-control" name="url" id="field_url" data-cy="url" formControlName="url" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_description" jhiTranslate="forexBeApp.broker.description">Description</label>
+          <textarea
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_rating" jhiTranslate="forexBeApp.broker.rating">Rating</label>
+          <input type="number" class="form-control" name="rating" id="field_rating" data-cy="rating" formControlName="rating" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_minDeposit" jhiTranslate="forexBeApp.broker.minDeposit">Min Deposit</label>
+          <input
+            type="number"
+            class="form-control"
+            name="minDeposit"
+            id="field_minDeposit"
+            data-cy="minDeposit"
+            formControlName="minDeposit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_spreads" jhiTranslate="forexBeApp.broker.spreads">Spreads</label>
+          <input type="text" class="form-control" name="spreads" id="field_spreads" data-cy="spreads" formControlName="spreads" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_leverage" jhiTranslate="forexBeApp.broker.leverage">Leverage</label>
+          <input type="text" class="form-control" name="leverage" id="field_leverage" data-cy="leverage" formControlName="leverage" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_founded" jhiTranslate="forexBeApp.broker.founded">Founded</label>
+          <input type="number" class="form-control" name="founded" id="field_founded" data-cy="founded" formControlName="founded" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_headquarters" jhiTranslate="forexBeApp.broker.headquarters">Headquarters</label>
+          <input
+            type="text"
+            class="form-control"
+            name="headquarters"
+            id="field_headquarters"
+            data-cy="headquarters"
+            formControlName="headquarters"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

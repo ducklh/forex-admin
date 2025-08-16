@@ -1,0 +1,44 @@
+{
+  "forexBeApp": {
+    "cryptoBroker": {
+      "home": {
+        "title": "Crypto Brokers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Crypto Broker",
+        "createOrEditLabel": "Create or edit a Crypto Broker",
+        "notFound": "No Crypto Brokers found"
+      },
+      "created": "A new Crypto Broker is created with identifier {{ param }}",
+      "updated": "A Crypto Broker is updated with identifier {{ param }}",
+      "deleted": "A Crypto Broker is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Crypto Broker {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Broker"
+      },
+      "id": "ID",
+      "name": "Name",
+      "logo": "Logo",
+      "url": "Url",
+      "description": "Description",
+      "rating": "Rating",
+      "features": "Features",
+      "regulation": "Regulation",
+      "minDeposit": "Min Deposit",
+      "tradingFees": "Trading Fees",
+      "supportedCoins": "Supported Coins",
+      "pros": "Pros",
+      "cons": "Cons",
+      "founded": "Founded",
+      "headquarters": "Headquarters",
+      "tradingVolume": "Trading Volume",
+      "securityFeatures": "Security Features",
+      "paymentMethods": "Payment Methods",
+      "customerSupport": "Customer Support",
+      "mobileApp": "Mobile App",
+      "apiSupport": "Api Support",
+      "detailedDescription": "Detailed Description"
+    }
+  }
+}

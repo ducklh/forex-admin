@@ -1,0 +1,25 @@
+{
+  "forexBeApp": {
+    "paymentMethod": {
+      "home": {
+        "title": "Payment Methods",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Payment Method",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Payment Method",
+        "notFound": "No Payment Methods found"
+      },
+      "created": "Một Payment Method mới được tạo với định danh {{ param }}",
+      "updated": "Một Payment Method cập nhật với định danh {{ param }}",
+      "deleted": "Một Payment Method đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Payment Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Payment Method"
+      },
+      "id": "ID",
+      "name": "Name",
+      "broker": "Broker"
+    }
+  }
+}

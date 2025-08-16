@@ -15,7 +15,7 @@
 
 mongock:
   migration-scan-package:
-    - io.knetwork.group.config.dbmigrations
+    - com.knetwork.forex.config.dbmigrations
   mongo-db:
     read-concern: local
     write-concern:
@@ -81,7 +81,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: YmRmODJmMzgxYTMyOWQ0ZGE2YmUzOGI0ZmNjYmU4ZTNiMmViZmMxOTM2ZjkzZDcxYmUxNzNhY2QzZjQ1ODRlNzg1NTAyNDEwMzNiMWIzZWMwZGY0ZGJlMzZjYzYyNGZlZWEyOGJhY2Y1OTM5YTJjOGExMzU4ZDEwMDI0OTY5NWI=
+        base64-secret: NzZkZGE4OGU0YTFmNjFhNzJiN2U1NTZkM2M2NWJkZDIyNzE2MzdiMzI2MGE4YzAyODg1Y2FkOTc0MDI4NWUxN2M5YjI4YTQxNjFlOTE1MTBmNzQ1MDI5N2NkMWU4N2MzM2VkYzVhYWY4YjczYTM5YzcyODc2MDg4NGFlYTI3ODU=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 86400
