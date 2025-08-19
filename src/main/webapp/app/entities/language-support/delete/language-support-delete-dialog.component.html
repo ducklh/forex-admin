@@ -1,0 +1,28 @@
+@if (languageSupport) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(languageSupport.id!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="languageSupportDeleteDialogHeading" jhiTranslate="entity.delete.title">Confirm delete operation</h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p
+        id="jhi-delete-languageSupport-heading"
+        jhiTranslate="kNetworkAdminApp.languageSupport.delete.question"
+        [translateValues]="{ id: languageSupport.id }"
+      >
+        Are you sure you want to delete Language Support {{ languageSupport.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+      </button>
+
+      <button id="jhi-confirm-delete-languageSupport" data-cy="entityConfirmDeleteButton" type="submit" class="btn btn-danger">
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Delete</span>
+      </button>
+    </div>
+  </form>
+}

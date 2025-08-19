@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="FeatureHeading">
-    <span jhiTranslate="forexBeApp.feature.home.title">Features</span>
+    <span jhiTranslate="kNetworkAdminApp.feature.home.title">Features</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
         <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
-        <span jhiTranslate="forexBeApp.feature.home.refreshListLabel">Refresh list</span>
+        <span jhiTranslate="kNetworkAdminApp.feature.home.refreshListLabel">Refresh list</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/feature/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="forexBeApp.feature.home.createLabel">Create a new Feature</span>
+        <span jhiTranslate="kNetworkAdminApp.feature.home.createLabel">Create a new Feature</span>
       </button>
     </div>
   </h2>
@@ -26,7 +26,7 @@
 
   @if (features().length === 0) {
     <div class="alert alert-warning" id="no-result">
-      <span jhiTranslate="forexBeApp.feature.home.notFound">No Features found</span>
+      <span jhiTranslate="kNetworkAdminApp.feature.home.notFound">No Features found</span>
     </div>
   } @else {
     <div class="table-responsive table-entities" id="entities">
@@ -40,16 +40,17 @@
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
-            <th scope="col" jhiSortBy="name">
+            <th scope="col" jhiSortBy="value">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.feature.name">Name</span>
+                <span jhiTranslate="kNetworkAdminApp.feature.value">Value</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
-            <th scope="col" jhiSortBy="broker.id">
+            <th scope="col" jhiSortBy="valueEn">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.feature.broker">Broker</span>
+                <span jhiTranslate="kNetworkAdminApp.feature.valueEn">Value En</span>
+
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
@@ -62,14 +63,8 @@
               <td>
                 <a [routerLink]="['/feature', feature.id, 'view']">{{ feature.id }}</a>
               </td>
-              <td>{{ feature.name }}</td>
-              <td>
-                @if (feature.broker) {
-                  <div>
-                    <a [routerLink]="['/broker', feature.broker.id, 'view']">{{ feature.broker.id }}</a>
-                  </div>
-                }
-              </td>
+              <td>{{ feature.value }}</td>
+              <td>{{ feature.valueEn }}</td>
               <td class="text-end">
                 <div class="btn-group">
                   <a [routerLink]="['/feature', feature.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">

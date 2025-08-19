@@ -1,0 +1,77 @@
+{
+  "annotations": {
+    "changelogDate": "20250819162952"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "titleEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "excerpt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "excerptEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "contentEn",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "categoryEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "author",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publishedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "readTime",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fullContent",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "fullContentEn",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "name": "SiteNewsArticle",
+  "relationships": [
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "tag",
+      "otherEntityRelationshipName": "siteNewsArticles",
+      "relationshipName": "tags",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111111"
+    },
+    "value": "Ngoại hối",
+    "value_en": "Forex",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111112"
+    },
+    "value": "Kim loại quý",
+    "value_en": "Precious Metals",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111113"
+    },
+    "value": "Năng lượng",
+    "value_en": "Energies",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111114"
+    },
+    "value": "Chỉ số chứng khoán",
+    "value_en": "Stock Indices",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111115"
+    },
+    "value": "Cổ phiếu",
+    "value_en": "Stocks",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111116"
+    },
+    "value": "Trái phiếu",
+    "value_en": "Bonds",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111117"
+    },
+    "value": "Tiền điện tử",
+    "value_en": "Cryptocurrencies",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111118"
+    },
+    "value": "Hợp đồng tương lai",
+    "value_en": "Futures",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a001111111111111119"
+    },
+    "value": "Hàng hóa mềm",
+    "value_en": "Soft Commodities",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  },
+  {
+    "_id": {
+      "$oid": "66e05a00111111111111111a"
+    },
+    "value": "ETF",
+    "value_en": "Exchange Traded Funds",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Instrument"
+  }
+]

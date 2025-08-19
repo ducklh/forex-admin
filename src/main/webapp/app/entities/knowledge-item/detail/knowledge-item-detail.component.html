@@ -1,0 +1,97 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (knowledgeItem(); as knowledgeItemRef) {
+      <div>
+        <h2 data-cy="knowledgeItemDetailsHeading">
+          <span jhiTranslate="kNetworkAdminApp.knowledgeItem.detail.title">Knowledge Item</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.title">Title</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.title }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.titleEn">Title En</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.titleEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.excerpt">Excerpt</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.excerpt }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.excerptEn">Excerpt En</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.excerptEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.content">Content</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.content }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.contentEn">Content En</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.contentEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.category">Category</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.category }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.categoryEn">Category En</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.categoryEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.level">Level</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.level }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.levelEn">Level En</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.levelEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.author">Author</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.author }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.publishedAt">Published At</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.publishedAt | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.readTime">Read Time</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.readTime }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.image">Image</span></dt>
+          <dd>
+            <span>{{ knowledgeItemRef.image }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeItem.tags">Tags</span></dt>
+          <dd>
+            @for (tags of knowledgeItemRef.tags; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/knowledge-tag', tags.id, 'view']">{{ tags?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/knowledge-item', knowledgeItemRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

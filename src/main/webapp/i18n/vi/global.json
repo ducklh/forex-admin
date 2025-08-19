@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "ForexBe",
+    "title": "KNetworkAdmin",
     "browsehappy": "Bạn đang sử dụng một trình duyệt <strong>quá cũ</strong>. Vui lòng <a href=\"http://browsehappy.com/?locale=en\">nâng cấp trình duyệt</a> của bạn để có trải nghiệm tốt nhất.",
     "menu": {
       "home": "Trang chủ",
@@ -8,7 +8,27 @@
       "entities": {
         "main": "Thực thể",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "cryptoBroker": "Crypto Broker"
+        "forexBroker": "Forex Broker",
+        "feature": "Feature",
+        "platform": "Platform",
+        "instrument": "Instrument",
+        "pro": "Pro",
+        "con": "Con",
+        "languageSupport": "Language Support",
+        "support": "Support",
+        "paymentMethod": "Payment Method",
+        "cryptoBroker": "Crypto Broker",
+        "coin": "Coin",
+        "cryptoFeature": "Crypto Feature",
+        "cryptoPro": "Crypto Pro",
+        "cryptoCon": "Crypto Con",
+        "securityFeature": "Security Feature",
+        "cryptoPaymentMethod": "Crypto Payment Method",
+        "customerSupport": "Customer Support",
+        "tag": "Tag",
+        "knowledgeItem": "Knowledge Item",
+        "knowledgeTag": "Knowledge Tag",
+        "siteNewsArticle": "Site News Article"
       },
       "account": {
         "main": "Tài khoản",

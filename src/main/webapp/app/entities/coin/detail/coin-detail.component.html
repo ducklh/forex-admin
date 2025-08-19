@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (coin(); as coinRef) {
+      <div>
+        <h2 data-cy="coinDetailsHeading"><span jhiTranslate="kNetworkAdminApp.coin.detail.title">Coin</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ coinRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.coin.value">Value</span></dt>
+          <dd>
+            <span>{{ coinRef.value }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.coin.valueEn">Value En</span></dt>
+          <dd>
+            <span>{{ coinRef.valueEn }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/coin', coinRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

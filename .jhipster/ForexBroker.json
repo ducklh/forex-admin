@@ -1,0 +1,133 @@
+{
+  "annotations": {
+    "changelogDate": "20250819162932"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "logo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "descriptionEn",
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "regulation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "minDeposit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "spreads",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "leverage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "founded",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "headquarters",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "headquartersEn",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ForexBroker",
+  "relationships": [
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "feature",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexFeatures",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "platform",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexPlatforms",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "instrument",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexInstruments",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "pro",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexPros",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "con",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexCons",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "languageSupport",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexLanguages",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "support",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexSupports",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "paymentMethod",
+      "otherEntityRelationshipName": "forexBrokers",
+      "relationshipName": "forexPaymentMethods",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

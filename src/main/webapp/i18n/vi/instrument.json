@@ -1,5 +1,5 @@
 {
-  "forexBeApp": {
+  "kNetworkAdminApp": {
     "instrument": {
       "home": {
         "title": "Instruments",
@@ -18,8 +18,9 @@
         "title": "Instrument"
       },
       "id": "ID",
-      "name": "Name",
-      "broker": "Broker"
+      "value": "Value",
+      "valueEn": "Value En",
+      "forexBrokers": "Forex Brokers"
     }
   }
 }

@@ -2,7 +2,7 @@
   <div class="col-8">
     @if (instrument(); as instrumentRef) {
       <div>
-        <h2 data-cy="instrumentDetailsHeading"><span jhiTranslate="forexBeApp.instrument.detail.title">Instrument</span></h2>
+        <h2 data-cy="instrumentDetailsHeading"><span jhiTranslate="kNetworkAdminApp.instrument.detail.title">Instrument</span></h2>
 
         <hr />
 
@@ -15,17 +15,13 @@
           <dd>
             <span>{{ instrumentRef.id }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.instrument.name">Name</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.instrument.value">Value</span></dt>
           <dd>
-            <span>{{ instrumentRef.name }}</span>
+            <span>{{ instrumentRef.value }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.instrument.broker">Broker</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.instrument.valueEn">Value En</span></dt>
           <dd>
-            @if (instrument()!.broker) {
-              <div>
-                <a [routerLink]="['/broker', instrument()!.broker?.id, 'view']">{{ instrumentRef.broker?.id }}</a>
-              </div>
-            }
+            <span>{{ instrumentRef.valueEn }}</span>
           </dd>
         </dl>
 

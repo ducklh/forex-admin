@@ -18,8 +18,8 @@ type PlatformFormDefaults = Pick<NewPlatform, 'id'>;
 
 type PlatformFormGroupContent = {
   id: FormControl<IPlatform['id'] | NewPlatform['id']>;
-  name: FormControl<IPlatform['name']>;
-  broker: FormControl<IPlatform['broker']>;
+  value: FormControl<IPlatform['value']>;
+  valueEn: FormControl<IPlatform['valueEn']>;
 };
 
 export type PlatformFormGroup = FormGroup<PlatformFormGroupContent>;
@@ -39,10 +39,10 @@ export class PlatformFormService {
           validators: [Validators.required],
         },
       ),
-      name: new FormControl(platformRawValue.name, {
+      value: new FormControl(platformRawValue.value, {
         validators: [Validators.required],
       }),
-      broker: new FormControl(platformRawValue.broker),
+      valueEn: new FormControl(platformRawValue.valueEn),
     });
   }
 

@@ -1,0 +1,158 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (forexBroker(); as forexBrokerRef) {
+      <div>
+        <h2 data-cy="forexBrokerDetailsHeading"><span jhiTranslate="kNetworkAdminApp.forexBroker.detail.title">Forex Broker</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.name">Name</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.nameEn">Name En</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.nameEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.logo">Logo</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.logo }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.url">Url</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.url }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.description">Description</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.description }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.descriptionEn">Description En</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.descriptionEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.rating">Rating</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.rating }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.regulation">Regulation</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.regulation }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.minDeposit">Min Deposit</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.minDeposit }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.spreads">Spreads</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.spreads }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.leverage">Leverage</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.leverage }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.founded">Founded</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.founded }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.headquarters">Headquarters</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.headquarters }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.headquartersEn">Headquarters En</span></dt>
+          <dd>
+            <span>{{ forexBrokerRef.headquartersEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexFeatures">Forex Features</span></dt>
+          <dd>
+            @for (forexFeatures of forexBrokerRef.forexFeatures; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/feature', forexFeatures.id, 'view']">{{ forexFeatures?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexPlatforms">Forex Platforms</span></dt>
+          <dd>
+            @for (forexPlatforms of forexBrokerRef.forexPlatforms; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/platform', forexPlatforms.id, 'view']">{{ forexPlatforms?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexInstruments">Forex Instruments</span></dt>
+          <dd>
+            @for (forexInstruments of forexBrokerRef.forexInstruments; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/instrument', forexInstruments.id, 'view']">{{ forexInstruments?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexPros">Forex Pros</span></dt>
+          <dd>
+            @for (forexPros of forexBrokerRef.forexPros; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/pro', forexPros.id, 'view']">{{ forexPros?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexCons">Forex Cons</span></dt>
+          <dd>
+            @for (forexCons of forexBrokerRef.forexCons; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/con', forexCons.id, 'view']">{{ forexCons?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexLanguages">Forex Languages</span></dt>
+          <dd>
+            @for (forexLanguages of forexBrokerRef.forexLanguages; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/language-support', forexLanguages.id, 'view']">{{ forexLanguages?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexSupports">Forex Supports</span></dt>
+          <dd>
+            @for (forexSupports of forexBrokerRef.forexSupports; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/support', forexSupports.id, 'view']">{{ forexSupports?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.forexBroker.forexPaymentMethods">Forex Payment Methods</span></dt>
+          <dd>
+            @for (forexPaymentMethods of forexBrokerRef.forexPaymentMethods; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/payment-method', forexPaymentMethods.id, 'view']">{{ forexPaymentMethods?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/forex-broker', forexBrokerRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

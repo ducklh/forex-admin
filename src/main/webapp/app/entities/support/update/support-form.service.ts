@@ -18,8 +18,8 @@ type SupportFormDefaults = Pick<NewSupport, 'id'>;
 
 type SupportFormGroupContent = {
   id: FormControl<ISupport['id'] | NewSupport['id']>;
-  type: FormControl<ISupport['type']>;
-  broker: FormControl<ISupport['broker']>;
+  value: FormControl<ISupport['value']>;
+  valueEn: FormControl<ISupport['valueEn']>;
 };
 
 export type SupportFormGroup = FormGroup<SupportFormGroupContent>;
@@ -39,10 +39,10 @@ export class SupportFormService {
           validators: [Validators.required],
         },
       ),
-      type: new FormControl(supportRawValue.type, {
+      value: new FormControl(supportRawValue.value, {
         validators: [Validators.required],
       }),
-      broker: new FormControl(supportRawValue.broker),
+      valueEn: new FormControl(supportRawValue.valueEn),
     });
   }
 

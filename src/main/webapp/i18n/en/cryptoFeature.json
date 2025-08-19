@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "cryptoFeature": {
+      "home": {
+        "title": "Crypto Features",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Crypto Feature",
+        "createOrEditLabel": "Create or edit a Crypto Feature",
+        "notFound": "No Crypto Features found"
+      },
+      "created": "A new Crypto Feature is created with identifier {{ param }}",
+      "updated": "A Crypto Feature is updated with identifier {{ param }}",
+      "deleted": "A Crypto Feature is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Crypto Feature {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Feature"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

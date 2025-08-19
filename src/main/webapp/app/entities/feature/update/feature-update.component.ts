@@ -2,13 +2,11 @@ import { Component, OnInit, inject } from '@angular/core';
 import { HttpResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { finalize, map } from 'rxjs/operators';
+import { finalize } from 'rxjs/operators';
 
 import SharedModule from 'app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { IBroker } from 'app/entities/broker/broker.model';
-import { BrokerService } from 'app/entities/broker/service/broker.service';
 import { IFeature } from '../feature.model';
 import { FeatureService } from '../service/feature.service';
 import { FeatureFormGroup, FeatureFormService } from './feature-form.service';
@@ -22,17 +20,12 @@ export class FeatureUpdateComponent implements OnInit {
   isSaving = false;
   feature: IFeature | null = null;
 
-  brokersSharedCollection: IBroker[] = [];
-
   protected featureService = inject(FeatureService);
   protected featureFormService = inject(FeatureFormService);
-  protected brokerService = inject(BrokerService);
   protected activatedRoute = inject(ActivatedRoute);
 
   // eslint-disable-next-line @typescript-eslint/member-ordering
   editForm: FeatureFormGroup = this.featureFormService.createFeatureFormGroup();
-
-  compareBroker = (o1: IBroker | null, o2: IBroker | null): boolean => this.brokerService.compareBroker(o1, o2);
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ feature }) => {
@@ -40,8 +33,6 @@ export class FeatureUpdateComponent implements OnInit {
       if (feature) {
         this.updateForm(feature);
       }
-
-      this.loadRelationshipsOptions();
     });
   }
 
@@ -81,15 +72,5 @@ export class FeatureUpdateComponent implements OnInit {
   protected updateForm(feature: IFeature): void {
     this.feature = feature;
     this.featureFormService.resetForm(this.editForm, feature);
-
-    this.brokersSharedCollection = this.brokerService.addBrokerToCollectionIfMissing<IBroker>(this.brokersSharedCollection, feature.broker);
-  }
-
-  protected loadRelationshipsOptions(): void {
-    this.brokerService
-      .query()
-      .pipe(map((res: HttpResponse<IBroker[]>) => res.body ?? []))
-      .pipe(map((brokers: IBroker[]) => this.brokerService.addBrokerToCollectionIfMissing<IBroker>(brokers, this.feature?.broker)))
-      .subscribe((brokers: IBroker[]) => (this.brokersSharedCollection = brokers));
   }
 }

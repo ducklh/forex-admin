@@ -2,21 +2,23 @@ import { ISupport, NewSupport } from './support.model';
 
 export const sampleWithRequiredData: ISupport = {
   id: 'f00e71e9-de90-4ffa-b06c-a2c85f55de7c',
-  type: 'spotless anti',
+  value: 'spotless anti',
 };
 
 export const sampleWithPartialData: ISupport = {
-  id: '74ee3a15-8644-46c1-9720-9b3ffa90c96c',
-  type: 'among',
+  id: '4ee3a158-6446-4c17-8209-b3ffa90c96c6',
+  value: 'accompany cafe',
+  valueEn: 'sans anneal',
 };
 
 export const sampleWithFullData: ISupport = {
   id: '18706a2f-a340-491a-96d4-d2b6e396068f',
-  type: 'by upright pfft',
+  value: 'by upright pfft',
+  valueEn: 'neglected',
 };
 
 export const sampleWithNewData: NewSupport = {
-  type: 'replacement helpfully',
+  value: 'replacement helpfully',
   id: null,
 };
 

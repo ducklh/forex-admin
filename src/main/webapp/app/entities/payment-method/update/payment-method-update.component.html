@@ -4,7 +4,7 @@
       <h2
         id="jhi-payment-method-heading"
         data-cy="PaymentMethodCreateUpdateHeading"
-        jhiTranslate="forexBeApp.paymentMethod.home.createOrEditLabel"
+        jhiTranslate="kNetworkAdminApp.paymentMethod.home.createOrEditLabel"
       >
         Create or edit a Payment Method
       </h2>
@@ -14,18 +14,18 @@
 
         @if (editForm.controls.id.value !== null) {
           <div class="mb-3">
-            <label class="form-label" for="field_id" jhiTranslate="forexBeApp.paymentMethod.id">ID</label>
+            <label class="form-label" for="field_id" jhiTranslate="kNetworkAdminApp.paymentMethod.id">ID</label>
             <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
           </div>
         }
 
-        @let nameRef = editForm.get('name')!;
+        @let valueRef = editForm.get('value')!;
         <div class="mb-3">
-          <label class="form-label" for="field_name" jhiTranslate="forexBeApp.paymentMethod.name">Name</label>
-          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
-          @if (nameRef.invalid && (nameRef.dirty || nameRef.touched)) {
+          <label class="form-label" for="field_value" jhiTranslate="kNetworkAdminApp.paymentMethod.value">Value</label>
+          <input type="text" class="form-control" name="value" id="field_value" data-cy="value" formControlName="value" />
+          @if (valueRef.invalid && (valueRef.dirty || valueRef.touched)) {
             <div>
-              @if (editForm.get('name')?.errors?.required) {
+              @if (editForm.get('value')?.errors?.required) {
                 <small class="form-text text-danger" jhiTranslate="entity.validation.required">This field is required.</small>
               }
             </div>
@@ -33,20 +33,8 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_broker" jhiTranslate="forexBeApp.paymentMethod.broker">Broker</label>
-          <select
-            class="form-control"
-            id="field_broker"
-            data-cy="broker"
-            name="broker"
-            formControlName="broker"
-            [compareWith]="compareBroker"
-          >
-            <option [ngValue]="null"></option>
-            @for (brokerOption of brokersSharedCollection; track $index) {
-              <option [ngValue]="brokerOption">{{ brokerOption.id }}</option>
-            }
-          </select>
+          <label class="form-label" for="field_valueEn" jhiTranslate="kNetworkAdminApp.paymentMethod.valueEn">Value En</label>
+          <input type="text" class="form-control" name="valueEn" id="field_valueEn" data-cy="valueEn" formControlName="valueEn" />
         </div>
       </div>
 

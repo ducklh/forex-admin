@@ -1,0 +1,92 @@
+<div>
+  <h2 id="page-heading" data-cy="KnowledgeTagHeading">
+    <span jhiTranslate="kNetworkAdminApp.knowledgeTag.home.title">Knowledge Tags</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.knowledgeTag.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-knowledge-tag"
+        [routerLink]="['/knowledge-tag/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.knowledgeTag.home.createLabel">Create a new Knowledge Tag</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (knowledgeTags().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="kNetworkAdminApp.knowledgeTag.home.notFound">No Knowledge Tags found</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeTag.value">Value</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valueEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeTag.valueEn">Value En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (knowledgeTag of knowledgeTags(); track trackId(knowledgeTag)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/knowledge-tag', knowledgeTag.id, 'view']">{{ knowledgeTag.id }}</a>
+              </td>
+              <td>{{ knowledgeTag.value }}</td>
+              <td>{{ knowledgeTag.valueEn }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/knowledge-tag', knowledgeTag.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a [routerLink]="['/knowledge-tag', knowledgeTag.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(knowledgeTag)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -18,8 +18,8 @@ type ConFormDefaults = Pick<NewCon, 'id'>;
 
 type ConFormGroupContent = {
   id: FormControl<ICon['id'] | NewCon['id']>;
-  text: FormControl<ICon['text']>;
-  broker: FormControl<ICon['broker']>;
+  value: FormControl<ICon['value']>;
+  valueEn: FormControl<ICon['valueEn']>;
 };
 
 export type ConFormGroup = FormGroup<ConFormGroupContent>;
@@ -39,10 +39,10 @@ export class ConFormService {
           validators: [Validators.required],
         },
       ),
-      text: new FormControl(conRawValue.text, {
+      value: new FormControl(conRawValue.value, {
         validators: [Validators.required],
       }),
-      broker: new FormControl(conRawValue.broker),
+      valueEn: new FormControl(conRawValue.valueEn),
     });
   }
 

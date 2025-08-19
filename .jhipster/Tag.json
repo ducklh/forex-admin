@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20250819162949"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "value",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valueEn",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Tag",
+  "relationships": [
+    {
+      "otherEntityName": "siteNewsArticle",
+      "otherEntityRelationshipName": "tags",
+      "relationshipName": "siteNewsArticles",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

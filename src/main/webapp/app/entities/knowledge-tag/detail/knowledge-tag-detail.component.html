@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (knowledgeTag(); as knowledgeTagRef) {
+      <div>
+        <h2 data-cy="knowledgeTagDetailsHeading"><span jhiTranslate="kNetworkAdminApp.knowledgeTag.detail.title">Knowledge Tag</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ knowledgeTagRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeTag.value">Value</span></dt>
+          <dd>
+            <span>{{ knowledgeTagRef.value }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.knowledgeTag.valueEn">Value En</span></dt>
+          <dd>
+            <span>{{ knowledgeTagRef.valueEn }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/knowledge-tag', knowledgeTagRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

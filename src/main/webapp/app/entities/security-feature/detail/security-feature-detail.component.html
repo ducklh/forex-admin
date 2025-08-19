@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (securityFeature(); as securityFeatureRef) {
+      <div>
+        <h2 data-cy="securityFeatureDetailsHeading">
+          <span jhiTranslate="kNetworkAdminApp.securityFeature.detail.title">Security Feature</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ securityFeatureRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.securityFeature.value">Value</span></dt>
+          <dd>
+            <span>{{ securityFeatureRef.value }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.securityFeature.valueEn">Value En</span></dt>
+          <dd>
+            <span>{{ securityFeatureRef.valueEn }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/security-feature', securityFeatureRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

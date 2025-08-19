@@ -1,0 +1,38 @@
+{
+  "kNetworkAdminApp": {
+    "siteNewsArticle": {
+      "home": {
+        "title": "Site News Articles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Site News Article",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Site News Article",
+        "notFound": "No Site News Articles found"
+      },
+      "created": "Một Site News Article mới được tạo với định danh {{ param }}",
+      "updated": "Một Site News Article cập nhật với định danh {{ param }}",
+      "deleted": "Một Site News Article đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Site News Article {{ id }}?"
+      },
+      "detail": {
+        "title": "Site News Article"
+      },
+      "id": "ID",
+      "title": "Title",
+      "titleEn": "Title En",
+      "excerpt": "Excerpt",
+      "excerptEn": "Excerpt En",
+      "content": "Content",
+      "contentEn": "Content En",
+      "category": "Category",
+      "categoryEn": "Category En",
+      "author": "Author",
+      "publishedAt": "Published At",
+      "readTime": "Read Time",
+      "image": "Image",
+      "fullContent": "Full Content",
+      "fullContentEn": "Full Content En",
+      "tags": "Tags"
+    }
+  }
+}

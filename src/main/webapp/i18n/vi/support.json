@@ -1,5 +1,5 @@
 {
-  "forexBeApp": {
+  "kNetworkAdminApp": {
     "support": {
       "home": {
         "title": "Supports",
@@ -18,8 +18,9 @@
         "title": "Support"
       },
       "id": "ID",
-      "type": "Type",
-      "broker": "Broker"
+      "value": "Value",
+      "valueEn": "Value En",
+      "forexBrokers": "Forex Brokers"
     }
   }
 }

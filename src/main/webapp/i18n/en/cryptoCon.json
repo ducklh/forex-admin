@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "cryptoCon": {
+      "home": {
+        "title": "Crypto Cons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Crypto Con",
+        "createOrEditLabel": "Create or edit a Crypto Con",
+        "notFound": "No Crypto Cons found"
+      },
+      "created": "A new Crypto Con is created with identifier {{ param }}",
+      "updated": "A Crypto Con is updated with identifier {{ param }}",
+      "deleted": "A Crypto Con is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Crypto Con {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Con"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

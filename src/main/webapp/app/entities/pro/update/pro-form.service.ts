@@ -18,8 +18,8 @@ type ProFormDefaults = Pick<NewPro, 'id'>;
 
 type ProFormGroupContent = {
   id: FormControl<IPro['id'] | NewPro['id']>;
-  text: FormControl<IPro['text']>;
-  broker: FormControl<IPro['broker']>;
+  value: FormControl<IPro['value']>;
+  valueEn: FormControl<IPro['valueEn']>;
 };
 
 export type ProFormGroup = FormGroup<ProFormGroupContent>;
@@ -39,10 +39,10 @@ export class ProFormService {
           validators: [Validators.required],
         },
       ),
-      text: new FormControl(proRawValue.text, {
+      value: new FormControl(proRawValue.value, {
         validators: [Validators.required],
       }),
-      broker: new FormControl(proRawValue.broker),
+      valueEn: new FormControl(proRawValue.valueEn),
     });
   }
 

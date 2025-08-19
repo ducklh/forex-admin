@@ -14,31 +14,47 @@ type PartialWithRequiredKeyOf<T extends { id: unknown }> = Partial<Omit<T, 'id'>
  */
 type CryptoBrokerFormGroupInput = ICryptoBroker | PartialWithRequiredKeyOf<NewCryptoBroker>;
 
-type CryptoBrokerFormDefaults = Pick<NewCryptoBroker, 'id' | 'mobileApp' | 'apiSupport'>;
+type CryptoBrokerFormDefaults = Pick<
+  NewCryptoBroker,
+  | 'id'
+  | 'mobileApp'
+  | 'apiSupport'
+  | 'cryptoFeatures'
+  | 'supportedCoins'
+  | 'cryptoPros'
+  | 'cryptoCons'
+  | 'securityFeatures'
+  | 'paymentMethods'
+  | 'customerSupports'
+>;
 
 type CryptoBrokerFormGroupContent = {
   id: FormControl<ICryptoBroker['id'] | NewCryptoBroker['id']>;
   name: FormControl<ICryptoBroker['name']>;
+  nameEn: FormControl<ICryptoBroker['nameEn']>;
   logo: FormControl<ICryptoBroker['logo']>;
   url: FormControl<ICryptoBroker['url']>;
   description: FormControl<ICryptoBroker['description']>;
+  descriptionEn: FormControl<ICryptoBroker['descriptionEn']>;
   rating: FormControl<ICryptoBroker['rating']>;
-  features: FormControl<ICryptoBroker['features']>;
   regulation: FormControl<ICryptoBroker['regulation']>;
   minDeposit: FormControl<ICryptoBroker['minDeposit']>;
   tradingFees: FormControl<ICryptoBroker['tradingFees']>;
-  supportedCoins: FormControl<ICryptoBroker['supportedCoins']>;
-  pros: FormControl<ICryptoBroker['pros']>;
-  cons: FormControl<ICryptoBroker['cons']>;
   founded: FormControl<ICryptoBroker['founded']>;
   headquarters: FormControl<ICryptoBroker['headquarters']>;
+  headquartersEn: FormControl<ICryptoBroker['headquartersEn']>;
   tradingVolume: FormControl<ICryptoBroker['tradingVolume']>;
-  securityFeatures: FormControl<ICryptoBroker['securityFeatures']>;
-  paymentMethods: FormControl<ICryptoBroker['paymentMethods']>;
-  customerSupport: FormControl<ICryptoBroker['customerSupport']>;
   mobileApp: FormControl<ICryptoBroker['mobileApp']>;
   apiSupport: FormControl<ICryptoBroker['apiSupport']>;
   detailedDescription: FormControl<ICryptoBroker['detailedDescription']>;
+  detailedDescriptionEn: FormControl<ICryptoBroker['detailedDescriptionEn']>;
+  cryptoFeatures: FormControl<ICryptoBroker['cryptoFeatures']>;
+  supportedCoins: FormControl<ICryptoBroker['supportedCoins']>;
+  cryptoPros: FormControl<ICryptoBroker['cryptoPros']>;
+  cryptoCons: FormControl<ICryptoBroker['cryptoCons']>;
+  securityFeatures: FormControl<ICryptoBroker['securityFeatures']>;
+  paymentMethods: FormControl<ICryptoBroker['paymentMethods']>;
+  customerSupports: FormControl<ICryptoBroker['customerSupports']>;
 };
 
 export type CryptoBrokerFormGroup = FormGroup<CryptoBrokerFormGroupContent>;
@@ -61,28 +77,30 @@ export class CryptoBrokerFormService {
       name: new FormControl(cryptoBrokerRawValue.name, {
         validators: [Validators.required],
       }),
+      nameEn: new FormControl(cryptoBrokerRawValue.nameEn),
       logo: new FormControl(cryptoBrokerRawValue.logo),
       url: new FormControl(cryptoBrokerRawValue.url),
-      description: new FormControl(cryptoBrokerRawValue.description, {
-        validators: [Validators.maxLength(500)],
-      }),
+      description: new FormControl(cryptoBrokerRawValue.description),
+      descriptionEn: new FormControl(cryptoBrokerRawValue.descriptionEn),
       rating: new FormControl(cryptoBrokerRawValue.rating),
-      features: new FormControl(cryptoBrokerRawValue.features),
       regulation: new FormControl(cryptoBrokerRawValue.regulation),
       minDeposit: new FormControl(cryptoBrokerRawValue.minDeposit),
       tradingFees: new FormControl(cryptoBrokerRawValue.tradingFees),
-      supportedCoins: new FormControl(cryptoBrokerRawValue.supportedCoins),
-      pros: new FormControl(cryptoBrokerRawValue.pros),
-      cons: new FormControl(cryptoBrokerRawValue.cons),
       founded: new FormControl(cryptoBrokerRawValue.founded),
       headquarters: new FormControl(cryptoBrokerRawValue.headquarters),
+      headquartersEn: new FormControl(cryptoBrokerRawValue.headquartersEn),
       tradingVolume: new FormControl(cryptoBrokerRawValue.tradingVolume),
-      securityFeatures: new FormControl(cryptoBrokerRawValue.securityFeatures),
-      paymentMethods: new FormControl(cryptoBrokerRawValue.paymentMethods),
-      customerSupport: new FormControl(cryptoBrokerRawValue.customerSupport),
       mobileApp: new FormControl(cryptoBrokerRawValue.mobileApp),
       apiSupport: new FormControl(cryptoBrokerRawValue.apiSupport),
       detailedDescription: new FormControl(cryptoBrokerRawValue.detailedDescription),
+      detailedDescriptionEn: new FormControl(cryptoBrokerRawValue.detailedDescriptionEn),
+      cryptoFeatures: new FormControl(cryptoBrokerRawValue.cryptoFeatures ?? []),
+      supportedCoins: new FormControl(cryptoBrokerRawValue.supportedCoins ?? []),
+      cryptoPros: new FormControl(cryptoBrokerRawValue.cryptoPros ?? []),
+      cryptoCons: new FormControl(cryptoBrokerRawValue.cryptoCons ?? []),
+      securityFeatures: new FormControl(cryptoBrokerRawValue.securityFeatures ?? []),
+      paymentMethods: new FormControl(cryptoBrokerRawValue.paymentMethods ?? []),
+      customerSupports: new FormControl(cryptoBrokerRawValue.customerSupports ?? []),
     });
   }
 
@@ -105,6 +123,13 @@ export class CryptoBrokerFormService {
       id: null,
       mobileApp: false,
       apiSupport: false,
+      cryptoFeatures: [],
+      supportedCoins: [],
+      cryptoPros: [],
+      cryptoCons: [],
+      securityFeatures: [],
+      paymentMethods: [],
+      customerSupports: [],
     };
   }
 }

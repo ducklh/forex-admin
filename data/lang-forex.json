@@ -1,0 +1,92 @@
+[
+  {
+    "value": "Tiếng Việt",
+    "value_en": "Vietnamese",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Anh",
+    "value_en": "English",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Trung",
+    "value_en": "Chinese",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Nhật",
+    "value_en": "Japanese",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Hàn",
+    "value_en": "Korean",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Thái",
+    "value_en": "Thai",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Indonesia",
+    "value_en": "Indonesian",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Malaysia",
+    "value_en": "Malay",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Nga",
+    "value_en": "Russian",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Tây Ban Nha",
+    "value_en": "Spanish",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Pháp",
+    "value_en": "French",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Đức",
+    "value_en": "German",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Bồ Đào Nha",
+    "value_en": "Portuguese",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Ả Rập",
+    "value_en": "Arabic",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  },
+  {
+    "value": "Tiếng Thổ Nhĩ Kỳ",
+    "value_en": "Turkish",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Language"
+  }
+]

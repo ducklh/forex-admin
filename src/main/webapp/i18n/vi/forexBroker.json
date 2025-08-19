@@ -1,0 +1,45 @@
+{
+  "kNetworkAdminApp": {
+    "forexBroker": {
+      "home": {
+        "title": "Forex Brokers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Forex Broker",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Forex Broker",
+        "notFound": "No Forex Brokers found"
+      },
+      "created": "Một Forex Broker mới được tạo với định danh {{ param }}",
+      "updated": "Một Forex Broker cập nhật với định danh {{ param }}",
+      "deleted": "Một Forex Broker đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Forex Broker {{ id }}?"
+      },
+      "detail": {
+        "title": "Forex Broker"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nameEn": "Name En",
+      "logo": "Logo",
+      "url": "Url",
+      "description": "Description",
+      "descriptionEn": "Description En",
+      "rating": "Rating",
+      "regulation": "Regulation",
+      "minDeposit": "Min Deposit",
+      "spreads": "Spreads",
+      "leverage": "Leverage",
+      "founded": "Founded",
+      "headquarters": "Headquarters",
+      "headquartersEn": "Headquarters En",
+      "forexFeatures": "Forex Features",
+      "forexPlatforms": "Forex Platforms",
+      "forexInstruments": "Forex Instruments",
+      "forexPros": "Forex Pros",
+      "forexCons": "Forex Cons",
+      "forexLanguages": "Forex Languages",
+      "forexSupports": "Forex Supports",
+      "forexPaymentMethods": "Forex Payment Methods"
+    }
+  }
+}

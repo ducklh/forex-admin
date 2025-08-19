@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "coin": {
+      "home": {
+        "title": "Coins",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Coin",
+        "createOrEditLabel": "Create or edit a Coin",
+        "notFound": "No Coins found"
+      },
+      "created": "A new Coin is created with identifier {{ param }}",
+      "updated": "A Coin is updated with identifier {{ param }}",
+      "deleted": "A Coin is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Coin {{ id }}?"
+      },
+      "detail": {
+        "title": "Coin"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

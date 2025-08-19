@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "knowledgeTag": {
+      "home": {
+        "title": "Knowledge Tags",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Knowledge Tag",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Knowledge Tag",
+        "notFound": "No Knowledge Tags found"
+      },
+      "created": "Một Knowledge Tag mới được tạo với định danh {{ param }}",
+      "updated": "Một Knowledge Tag cập nhật với định danh {{ param }}",
+      "deleted": "Một Knowledge Tag đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Knowledge Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Knowledge Tag"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "knowledgeItems": "Knowledge Items"
+    }
+  }
+}

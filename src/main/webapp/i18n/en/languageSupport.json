@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "languageSupport": {
+      "home": {
+        "title": "Language Supports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Language Support",
+        "createOrEditLabel": "Create or edit a Language Support",
+        "notFound": "No Language Supports found"
+      },
+      "created": "A new Language Support is created with identifier {{ param }}",
+      "updated": "A Language Support is updated with identifier {{ param }}",
+      "deleted": "A Language Support is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Language Support {{ id }}?"
+      },
+      "detail": {
+        "title": "Language Support"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "forexBrokers": "Forex Brokers"
+    }
+  }
+}

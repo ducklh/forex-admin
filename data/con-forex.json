@@ -1,0 +1,236 @@
+[
+  {
+    "value": "Hạn chế về sản phẩm",
+    "value_en": "Limited products",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Phí rút tiền cao",
+    "value_en": "High withdrawal fees",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Spread cao",
+    "value_en": "High spreads",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Đòn bẩy thấp",
+    "value_en": "Low leverage",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không hỗ trợ MetaTrader 5",
+    "value_en": "No MetaTrader 5 support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có giao dịch tiền điện tử",
+    "value_en": "No crypto trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không hỗ trợ khách hàng 24/7",
+    "value_en": "No 24/7 support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Quy trình xác minh chậm",
+    "value_en": "Slow verification process",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có tài khoản demo",
+    "value_en": "No demo account",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có ứng dụng di động",
+    "value_en": "No mobile app",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Yêu cầu ký quỹ cao",
+    "value_en": "High margin requirements",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có hỗ trợ tiếng Việt",
+    "value_en": "No Vietnamese support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có giao dịch ECN",
+    "value_en": "No ECN trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Chậm xử lý lệnh",
+    "value_en": "Slow order execution",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không hỗ trợ copy trading",
+    "value_en": "No copy trading support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có bảo hiểm tiền gửi",
+    "value_en": "No deposit insurance",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có công cụ phân tích nâng cao",
+    "value_en": "No advanced analytics tools",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có tài khoản Hồi giáo",
+    "value_en": "No Islamic account",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Ít phương thức nạp rút tiền",
+    "value_en": "Limited deposit/withdrawal methods",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không được quản lý bởi cơ quan uy tín",
+    "value_en": "Not regulated by top-tier authorities",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Phí qua đêm cao",
+    "value_en": "High overnight fees",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có giao dịch CFD cổ phiếu",
+    "value_en": "No stock CFD trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có giao dịch hàng hóa",
+    "value_en": "No commodities trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Nền tảng giao dịch lỗi thời",
+    "value_en": "Outdated trading platform",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có bonus chào mừng",
+    "value_en": "No welcome bonus",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có giao dịch xã hội",
+    "value_en": "No social trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Chi phí ẩn cao",
+    "value_en": "High hidden costs",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có API giao dịch",
+    "value_en": "No trading API",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có VPS miễn phí",
+    "value_en": "No free VPS",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không hỗ trợ giao dịch vi mô",
+    "value_en": "No micro trading support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có tài liệu học tập miễn phí",
+    "value_en": "No free learning materials",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có webinar đào tạo",
+    "value_en": "No training webinars",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Phần mềm phân tích kỹ thuật hạn chế",
+    "value_en": "Limited technical analysis tools",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không hỗ trợ giao dịch tự động",
+    "value_en": "No automated trading support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không hỗ trợ nhiều loại tài khoản",
+    "value_en": "No multiple account types",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Ứng dụng di động không ổn định",
+    "value_en": "Unstable mobile app",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có bảo vệ số dư âm",
+    "value_en": "No negative balance protection",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Không có giao dịch trái phiếu",
+    "value_en": "No bond trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  },
+  {
+    "value": "Hỗ trợ khách hàng chậm",
+    "value_en": "Slow customer support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Con"
+  }
+]

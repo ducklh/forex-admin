@@ -1,0 +1,45 @@
+{
+  "kNetworkAdminApp": {
+    "forexBroker": {
+      "home": {
+        "title": "Forex Brokers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Forex Broker",
+        "createOrEditLabel": "Create or edit a Forex Broker",
+        "notFound": "No Forex Brokers found"
+      },
+      "created": "A new Forex Broker is created with identifier {{ param }}",
+      "updated": "A Forex Broker is updated with identifier {{ param }}",
+      "deleted": "A Forex Broker is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Forex Broker {{ id }}?"
+      },
+      "detail": {
+        "title": "Forex Broker"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nameEn": "Name En",
+      "logo": "Logo",
+      "url": "Url",
+      "description": "Description",
+      "descriptionEn": "Description En",
+      "rating": "Rating",
+      "regulation": "Regulation",
+      "minDeposit": "Min Deposit",
+      "spreads": "Spreads",
+      "leverage": "Leverage",
+      "founded": "Founded",
+      "headquarters": "Headquarters",
+      "headquartersEn": "Headquarters En",
+      "forexFeatures": "Forex Features",
+      "forexPlatforms": "Forex Platforms",
+      "forexInstruments": "Forex Instruments",
+      "forexPros": "Forex Pros",
+      "forexCons": "Forex Cons",
+      "forexLanguages": "Forex Languages",
+      "forexSupports": "Forex Supports",
+      "forexPaymentMethods": "Forex Payment Methods"
+    }
+  }
+}

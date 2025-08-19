@@ -1,5 +1,5 @@
 {
-  "forexBeApp": {
+  "kNetworkAdminApp": {
     "cryptoBroker": {
       "home": {
         "title": "Crypto Brokers",
@@ -19,26 +19,30 @@
       },
       "id": "ID",
       "name": "Name",
+      "nameEn": "Name En",
       "logo": "Logo",
       "url": "Url",
       "description": "Description",
+      "descriptionEn": "Description En",
       "rating": "Rating",
-      "features": "Features",
       "regulation": "Regulation",
       "minDeposit": "Min Deposit",
       "tradingFees": "Trading Fees",
-      "supportedCoins": "Supported Coins",
-      "pros": "Pros",
-      "cons": "Cons",
       "founded": "Founded",
       "headquarters": "Headquarters",
+      "headquartersEn": "Headquarters En",
       "tradingVolume": "Trading Volume",
-      "securityFeatures": "Security Features",
-      "paymentMethods": "Payment Methods",
-      "customerSupport": "Customer Support",
       "mobileApp": "Mobile App",
       "apiSupport": "Api Support",
-      "detailedDescription": "Detailed Description"
+      "detailedDescription": "Detailed Description",
+      "detailedDescriptionEn": "Detailed Description En",
+      "cryptoFeatures": "Crypto Features",
+      "supportedCoins": "Supported Coins",
+      "cryptoPros": "Crypto Pros",
+      "cryptoCons": "Crypto Cons",
+      "securityFeatures": "Security Features",
+      "paymentMethods": "Payment Methods",
+      "customerSupports": "Customer Supports"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "forexBeApp": {
+  "kNetworkAdminApp": {
     "platform": {
       "home": {
         "title": "Platforms",
@@ -18,8 +18,9 @@
         "title": "Platform"
       },
       "id": "ID",
-      "name": "Name",
-      "broker": "Broker"
+      "value": "Value",
+      "valueEn": "Value En",
+      "forexBrokers": "Forex Brokers"
     }
   }
 }

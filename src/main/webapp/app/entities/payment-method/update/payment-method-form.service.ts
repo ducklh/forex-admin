@@ -18,8 +18,8 @@ type PaymentMethodFormDefaults = Pick<NewPaymentMethod, 'id'>;
 
 type PaymentMethodFormGroupContent = {
   id: FormControl<IPaymentMethod['id'] | NewPaymentMethod['id']>;
-  name: FormControl<IPaymentMethod['name']>;
-  broker: FormControl<IPaymentMethod['broker']>;
+  value: FormControl<IPaymentMethod['value']>;
+  valueEn: FormControl<IPaymentMethod['valueEn']>;
 };
 
 export type PaymentMethodFormGroup = FormGroup<PaymentMethodFormGroupContent>;
@@ -39,10 +39,10 @@ export class PaymentMethodFormService {
           validators: [Validators.required],
         },
       ),
-      name: new FormControl(paymentMethodRawValue.name, {
+      value: new FormControl(paymentMethodRawValue.value, {
         validators: [Validators.required],
       }),
-      broker: new FormControl(paymentMethodRawValue.broker),
+      valueEn: new FormControl(paymentMethodRawValue.valueEn),
     });
   }
 

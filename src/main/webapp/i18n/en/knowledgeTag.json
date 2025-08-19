@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "knowledgeTag": {
+      "home": {
+        "title": "Knowledge Tags",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Knowledge Tag",
+        "createOrEditLabel": "Create or edit a Knowledge Tag",
+        "notFound": "No Knowledge Tags found"
+      },
+      "created": "A new Knowledge Tag is created with identifier {{ param }}",
+      "updated": "A Knowledge Tag is updated with identifier {{ param }}",
+      "deleted": "A Knowledge Tag is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Knowledge Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Knowledge Tag"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "knowledgeItems": "Knowledge Items"
+    }
+  }
+}

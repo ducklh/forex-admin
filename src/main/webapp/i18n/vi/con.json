@@ -1,5 +1,5 @@
 {
-  "forexBeApp": {
+  "kNetworkAdminApp": {
     "con": {
       "home": {
         "title": "Cons",
@@ -18,8 +18,9 @@
         "title": "Con"
       },
       "id": "ID",
-      "text": "Text",
-      "broker": "Broker"
+      "value": "Value",
+      "valueEn": "Value En",
+      "forexBrokers": "Forex Brokers"
     }
   }
 }

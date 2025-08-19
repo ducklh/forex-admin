@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20250819162951"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "value",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valueEn",
+      "fieldType": "String"
+    }
+  ],
+  "name": "KnowledgeTag",
+  "relationships": [
+    {
+      "otherEntityName": "knowledgeItem",
+      "otherEntityRelationshipName": "tags",
+      "relationshipName": "knowledgeItems",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

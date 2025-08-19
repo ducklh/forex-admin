@@ -1,0 +1,92 @@
+[
+  {
+    "value": "Hỗ trợ 24/7",
+    "value_en": "24/7 Support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Live Chat",
+    "value_en": "Live Chat",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Email",
+    "value_en": "Email",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Điện thoại",
+    "value_en": "Phone",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "WhatsApp",
+    "value_en": "WhatsApp",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Telegram",
+    "value_en": "Telegram",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "WeChat",
+    "value_en": "WeChat",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Messenger",
+    "value_en": "Messenger",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Diễn đàn cộng đồng",
+    "value_en": "Community Forum",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Trung tâm hỗ trợ",
+    "value_en": "Help Center",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "FAQ",
+    "value_en": "FAQ",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Skype",
+    "value_en": "Skype",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Zoom",
+    "value_en": "Zoom",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Hỗ trợ tài khoản cá nhân",
+    "value_en": "Dedicated Account Manager",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  },
+  {
+    "value": "Hỗ trợ qua ứng dụng di động",
+    "value_en": "Mobile App Support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Support"
+  }
+]

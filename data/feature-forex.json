@@ -1,0 +1,434 @@
+[
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1001"
+    },
+    "value": "Chênh lệch thấp",
+    "value_en": "Low spread",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1002"
+    },
+    "value": "Nạp và rút tiền nhanh",
+    "value_en": "Fast deposits and withdrawals",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1003"
+    },
+    "value": "Hỗ trợ 24/7",
+    "value_en": "24/7 support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1004"
+    },
+    "value": "Tài khoản demo",
+    "value_en": "Demo account",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1005"
+    },
+    "value": "Giáo dục miễn phí",
+    "value_en": "Free education",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1006"
+    },
+    "value": "Nền tảng MT4/MT5",
+    "value_en": "MT4/MT5 platforms",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1007"
+    },
+    "value": "Copy Trading",
+    "value_en": "Copy Trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1008"
+    },
+    "value": "Phân tích kỹ thuật",
+    "value_en": "Technical analysis",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1009"
+    },
+    "value": "True ECN",
+    "value_en": "True ECN",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1010"
+    },
+    "value": "Không báo giá lại",
+    "value_en": "No requotes",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1011"
+    },
+    "value": "Tốc độ cao",
+    "value_en": "High speed",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1012"
+    },
+    "value": "Chênh lệch thô",
+    "value_en": "Raw spreads",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1013"
+    },
+    "value": "Hoa hồng thấp",
+    "value_en": "Low commission",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1014"
+    },
+    "value": "Razor Spreads",
+    "value_en": "Razor Spreads",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1015"
+    },
+    "value": "Crypto CFD",
+    "value_en": "Crypto CFD",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1016"
+    },
+    "value": "Giao dịch xã hội",
+    "value_en": "Social Trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1017"
+    },
+    "value": "API Trading",
+    "value_en": "API Trading",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1018"
+    },
+    "value": "Nền tảng ổn định",
+    "value_en": "Stable platform",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1019"
+    },
+    "value": "AvaOptions",
+    "value_en": "AvaOptions",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1020"
+    },
+    "value": "AvaSocial",
+    "value_en": "AvaSocial",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1021"
+    },
+    "value": "DupliTrade",
+    "value_en": "DupliTrade",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1022"
+    },
+    "value": "Đa nền tảng",
+    "value_en": "Multiple platforms",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1023"
+    },
+    "value": "Rút tiền ngay lập tức",
+    "value_en": "Instant withdrawals",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1024"
+    },
+    "value": "Đòn bẩy cao",
+    "value_en": "High leverage",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1025"
+    },
+    "value": "Đa dạng tài khoản",
+    "value_en": "Variety of accounts",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1026"
+    },
+    "value": "Hỗ trợ tiếng Việt",
+    "value_en": "Vietnamese support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1027"
+    },
+    "value": "Tài khoản PAMM",
+    "value_en": "PAMM accounts",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1028"
+    },
+    "value": "Nhiều loại tài khoản",
+    "value_en": "Multiple account types",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1029"
+    },
+    "value": "Chi phí thấp",
+    "value_en": "Low costs",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1030"
+    },
+    "value": "ECN Pro",
+    "value_en": "ECN Pro",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1031"
+    },
+    "value": "Autochartist",
+    "value_en": "Autochartist",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1032"
+    },
+    "value": "Khớp lệnh nhanh",
+    "value_en": "Fast order execution",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1033"
+    },
+    "value": "Trading Station",
+    "value_en": "Trading Station",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1034"
+    },
+    "value": "Phân tích chuyên sâu",
+    "value_en": "In-depth analysis",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1035"
+    },
+    "value": "Thưởng hấp dẫn",
+    "value_en": "Attractive bonuses",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1036"
+    },
+    "value": "Tài khoản Cent",
+    "value_en": "Cent account",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1037"
+    },
+    "value": "Ứng dụng di động",
+    "value_en": "Mobile app",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1038"
+    },
+    "value": "Hỗ trợ đa ngôn ngữ",
+    "value_en": "Multi-language support",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1039"
+    },
+    "value": "MetaTrader Supreme",
+    "value_en": "MetaTrader Supreme",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1040"
+    },
+    "value": "ETF",
+    "value_en": "ETF",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1041"
+    },
+    "value": "Cổ phiếu",
+    "value_en": "Stocks",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1042"
+    },
+    "value": "Phân tích hàng ngày",
+    "value_en": "Daily analysis",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1043"
+    },
+    "value": "Tài khoản đa dạng",
+    "value_en": "Diverse accounts",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1044"
+    },
+    "value": "Zero spread",
+    "value_en": "Zero spread",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1045"
+    },
+    "value": "Đa dạng sản phẩm tài chính",
+    "value_en": "Wide range of financial instruments",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1046"
+    },
+    "value": "Nền tảng độc quyền",
+    "value_en": "Proprietary platform",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1047"
+    },
+    "value": "Ứng dụng đơn giản",
+    "value_en": "Simple app",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  },
+  {
+    "_id": {
+      "$oid": "66e0a7f736980218daeb1048"
+    },
+    "value": "Đào tạo",
+    "value_en": "Education",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Feature"
+  }
+]

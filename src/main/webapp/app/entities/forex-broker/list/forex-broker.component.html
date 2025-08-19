@@ -1,0 +1,306 @@
+<div>
+  <h2 id="page-heading" data-cy="ForexBrokerHeading">
+    <span jhiTranslate="kNetworkAdminApp.forexBroker.home.title">Forex Brokers</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.forexBroker.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-forex-broker"
+        [routerLink]="['/forex-broker/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.forexBroker.home.createLabel">Create a new Forex Broker</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (forexBrokers().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="kNetworkAdminApp.forexBroker.home.notFound">No Forex Brokers found</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="name">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.name">Name</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nameEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.nameEn">Name En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="logo">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.logo">Logo</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="url">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.url">Url</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="description">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.description">Description</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.descriptionEn">Description En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="rating">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.rating">Rating</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="regulation">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.regulation">Regulation</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="minDeposit">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.minDeposit">Min Deposit</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="spreads">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.spreads">Spreads</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="leverage">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.leverage">Leverage</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="founded">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.founded">Founded</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="headquarters">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.headquarters">Headquarters</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="headquartersEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.headquartersEn">Headquarters En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexFeatures.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexFeatures">Forex Features</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexPlatforms.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexPlatforms">Forex Platforms</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexInstruments.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexInstruments">Forex Instruments</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexPros.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexPros">Forex Pros</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexCons.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexCons">Forex Cons</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexLanguages.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexLanguages">Forex Languages</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexSupports.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexSupports">Forex Supports</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="forexPaymentMethods.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.forexBroker.forexPaymentMethods">Forex Payment Methods</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (forexBroker of forexBrokers(); track trackId(forexBroker)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/forex-broker', forexBroker.id, 'view']">{{ forexBroker.id }}</a>
+              </td>
+              <td>{{ forexBroker.name }}</td>
+              <td>{{ forexBroker.nameEn }}</td>
+              <td>{{ forexBroker.logo }}</td>
+              <td>{{ forexBroker.url }}</td>
+              <td>{{ forexBroker.description }}</td>
+              <td>{{ forexBroker.descriptionEn }}</td>
+              <td>{{ forexBroker.rating }}</td>
+              <td>{{ forexBroker.regulation }}</td>
+              <td>{{ forexBroker.minDeposit }}</td>
+              <td>{{ forexBroker.spreads }}</td>
+              <td>{{ forexBroker.leverage }}</td>
+              <td>{{ forexBroker.founded }}</td>
+              <td>{{ forexBroker.headquarters }}</td>
+              <td>{{ forexBroker.headquartersEn }}</td>
+              <td>
+                @for (forexFeatures of forexBroker.forexFeatures; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/feature', forexFeatures.id, 'view']">{{ forexFeatures.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (forexPlatforms of forexBroker.forexPlatforms; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/platform', forexPlatforms.id, 'view']">{{ forexPlatforms.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (forexInstruments of forexBroker.forexInstruments; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/instrument', forexInstruments.id, 'view']">{{
+                      forexInstruments.value
+                    }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (forexPros of forexBroker.forexPros; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/pro', forexPros.id, 'view']">{{ forexPros.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (forexCons of forexBroker.forexCons; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/con', forexCons.id, 'view']">{{ forexCons.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (forexLanguages of forexBroker.forexLanguages; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/language-support', forexLanguages.id, 'view']">{{
+                      forexLanguages.value
+                    }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (forexSupports of forexBroker.forexSupports; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/support', forexSupports.id, 'view']">{{ forexSupports.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (forexPaymentMethods of forexBroker.forexPaymentMethods; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/payment-method', forexPaymentMethods.id, 'view']">{{
+                      forexPaymentMethods.value
+                    }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/forex-broker', forexBroker.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a [routerLink]="['/forex-broker', forexBroker.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(forexBroker)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

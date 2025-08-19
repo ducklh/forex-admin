@@ -2,7 +2,7 @@
   <div class="col-8">
     @if (con(); as conRef) {
       <div>
-        <h2 data-cy="conDetailsHeading"><span jhiTranslate="forexBeApp.con.detail.title">Con</span></h2>
+        <h2 data-cy="conDetailsHeading"><span jhiTranslate="kNetworkAdminApp.con.detail.title">Con</span></h2>
 
         <hr />
 
@@ -15,17 +15,13 @@
           <dd>
             <span>{{ conRef.id }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.con.text">Text</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.con.value">Value</span></dt>
           <dd>
-            <span>{{ conRef.text }}</span>
+            <span>{{ conRef.value }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.con.broker">Broker</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.con.valueEn">Value En</span></dt>
           <dd>
-            @if (con()!.broker) {
-              <div>
-                <a [routerLink]="['/broker', con()!.broker?.id, 'view']">{{ conRef.broker?.id }}</a>
-              </div>
-            }
+            <span>{{ conRef.valueEn }}</span>
           </dd>
         </dl>
 

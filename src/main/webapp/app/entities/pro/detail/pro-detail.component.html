@@ -2,7 +2,7 @@
   <div class="col-8">
     @if (pro(); as proRef) {
       <div>
-        <h2 data-cy="proDetailsHeading"><span jhiTranslate="forexBeApp.pro.detail.title">Pro</span></h2>
+        <h2 data-cy="proDetailsHeading"><span jhiTranslate="kNetworkAdminApp.pro.detail.title">Pro</span></h2>
 
         <hr />
 
@@ -15,17 +15,13 @@
           <dd>
             <span>{{ proRef.id }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.pro.text">Text</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.pro.value">Value</span></dt>
           <dd>
-            <span>{{ proRef.text }}</span>
+            <span>{{ proRef.value }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.pro.broker">Broker</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.pro.valueEn">Value En</span></dt>
           <dd>
-            @if (pro()!.broker) {
-              <div>
-                <a [routerLink]="['/broker', pro()!.broker?.id, 'view']">{{ proRef.broker?.id }}</a>
-              </div>
-            }
+            <span>{{ proRef.valueEn }}</span>
           </dd>
         </dl>
 

@@ -1,0 +1,97 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (siteNewsArticle(); as siteNewsArticleRef) {
+      <div>
+        <h2 data-cy="siteNewsArticleDetailsHeading">
+          <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.detail.title">Site News Article</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.title">Title</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.title }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.titleEn">Title En</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.titleEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.excerpt">Excerpt</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.excerpt }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.excerptEn">Excerpt En</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.excerptEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.content">Content</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.content }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.contentEn">Content En</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.contentEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.category">Category</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.category }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.categoryEn">Category En</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.categoryEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.author">Author</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.author }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.publishedAt">Published At</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.publishedAt | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.readTime">Read Time</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.readTime }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.image">Image</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.image }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.fullContent">Full Content</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.fullContent }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.fullContentEn">Full Content En</span></dt>
+          <dd>
+            <span>{{ siteNewsArticleRef.fullContentEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.siteNewsArticle.tags">Tags</span></dt>
+          <dd>
+            @for (tags of siteNewsArticleRef.tags; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/tag', tags.id, 'view']">{{ tags?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/site-news-article', siteNewsArticleRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,110 @@
+[
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2001"
+    },
+    "value": "MT4",
+    "value_en": "MT4",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2002"
+    },
+    "value": "MT5",
+    "value_en": "MT5",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2003"
+    },
+    "value": "cTrader",
+    "value_en": "cTrader",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2004"
+    },
+    "value": "TradingView",
+    "value_en": "TradingView",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2005"
+    },
+    "value": "WebTrader",
+    "value_en": "WebTrader",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2006"
+    },
+    "value": "Ứng dụng di động",
+    "value_en": "Mobile App",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2007"
+    },
+    "value": "Trading Station",
+    "value_en": "Trading Station",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2008"
+    },
+    "value": "AvaOptions",
+    "value_en": "AvaOptions",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2009"
+    },
+    "value": "AvaSocial",
+    "value_en": "AvaSocial",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2010"
+    },
+    "value": "DupliTrade",
+    "value_en": "DupliTrade",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2011"
+    },
+    "value": "MetaTrader Supreme",
+    "value_en": "MetaTrader Supreme",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  },
+  {
+    "_id": {
+      "$oid": "68a4a7f736980218daeb2012"
+    },
+    "value": "Nền tảng độc quyền",
+    "value_en": "Proprietary Platform",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Platform"
+  }
+]

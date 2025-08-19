@@ -2,21 +2,22 @@ import { IInstrument, NewInstrument } from './instrument.model';
 
 export const sampleWithRequiredData: IInstrument = {
   id: '587bd4fa-ad3c-4883-a782-51e9016446ce',
-  name: 'why',
+  value: 'why',
 };
 
 export const sampleWithPartialData: IInstrument = {
-  id: 'fe8b25b9-c5de-4d54-95ad-61cc58a0083b',
-  name: 'till',
+  id: 'e8b25b9c-5ded-4545-8ad6-1cc58a0083b6',
+  value: 'whoever',
 };
 
 export const sampleWithFullData: IInstrument = {
   id: 'bf7568d4-18b7-4121-bad0-533404df5ee2',
-  name: 'given',
+  value: 'given',
+  valueEn: 'winged tomorrow yesterday',
 };
 
 export const sampleWithNewData: NewInstrument = {
-  name: 'instead frightfully',
+  value: 'instead frightfully',
   id: null,
 };
 

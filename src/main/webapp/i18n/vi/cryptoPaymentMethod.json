@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "cryptoPaymentMethod": {
+      "home": {
+        "title": "Crypto Payment Methods",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Crypto Payment Method",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Crypto Payment Method",
+        "notFound": "No Crypto Payment Methods found"
+      },
+      "created": "Một Crypto Payment Method mới được tạo với định danh {{ param }}",
+      "updated": "Một Crypto Payment Method cập nhật với định danh {{ param }}",
+      "deleted": "Một Crypto Payment Method đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Crypto Payment Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Payment Method"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

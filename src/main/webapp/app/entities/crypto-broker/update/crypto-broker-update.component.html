@@ -4,7 +4,7 @@
       <h2
         id="jhi-crypto-broker-heading"
         data-cy="CryptoBrokerCreateUpdateHeading"
-        jhiTranslate="forexBeApp.cryptoBroker.home.createOrEditLabel"
+        jhiTranslate="kNetworkAdminApp.cryptoBroker.home.createOrEditLabel"
       >
         Create or edit a Crypto Broker
       </h2>
@@ -14,14 +14,14 @@
 
         @if (editForm.controls.id.value !== null) {
           <div class="mb-3">
-            <label class="form-label" for="field_id" jhiTranslate="forexBeApp.cryptoBroker.id">ID</label>
+            <label class="form-label" for="field_id" jhiTranslate="kNetworkAdminApp.cryptoBroker.id">ID</label>
             <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
           </div>
         }
 
         @let nameRef = editForm.get('name')!;
         <div class="mb-3">
-          <label class="form-label" for="field_name" jhiTranslate="forexBeApp.cryptoBroker.name">Name</label>
+          <label class="form-label" for="field_name" jhiTranslate="kNetworkAdminApp.cryptoBroker.name">Name</label>
           <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
           @if (nameRef.invalid && (nameRef.dirty || nameRef.touched)) {
             <div>
@@ -33,49 +33,51 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_logo" jhiTranslate="forexBeApp.cryptoBroker.logo">Logo</label>
+          <label class="form-label" for="field_nameEn" jhiTranslate="kNetworkAdminApp.cryptoBroker.nameEn">Name En</label>
+          <input type="text" class="form-control" name="nameEn" id="field_nameEn" data-cy="nameEn" formControlName="nameEn" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_logo" jhiTranslate="kNetworkAdminApp.cryptoBroker.logo">Logo</label>
           <input type="text" class="form-control" name="logo" id="field_logo" data-cy="logo" formControlName="logo" />
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_url" jhiTranslate="forexBeApp.cryptoBroker.url">Url</label>
+          <label class="form-label" for="field_url" jhiTranslate="kNetworkAdminApp.cryptoBroker.url">Url</label>
           <input type="text" class="form-control" name="url" id="field_url" data-cy="url" formControlName="url" />
         </div>
 
-        @let descriptionRef = editForm.get('description')!;
         <div class="mb-3">
-          <label class="form-label" for="field_description" jhiTranslate="forexBeApp.cryptoBroker.description">Description</label>
-          <input
-            type="text"
+          <label class="form-label" for="field_description" jhiTranslate="kNetworkAdminApp.cryptoBroker.description">Description</label>
+          <textarea
             class="form-control"
             name="description"
             id="field_description"
             data-cy="description"
             formControlName="description"
-          />
-          @if (descriptionRef.invalid && (descriptionRef.dirty || descriptionRef.touched)) {
-            <div>
-              @if (editForm.get('description')?.errors?.maxlength) {
-                <small class="form-text text-danger" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: '500' }"
-                  >This field cannot be longer than 500 characters.</small
-                >
-              }
-            </div>
-          }
+          ></textarea>
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_rating" jhiTranslate="forexBeApp.cryptoBroker.rating">Rating</label>
+          <label class="form-label" for="field_descriptionEn" jhiTranslate="kNetworkAdminApp.cryptoBroker.descriptionEn"
+            >Description En</label
+          >
+          <textarea
+            class="form-control"
+            name="descriptionEn"
+            id="field_descriptionEn"
+            data-cy="descriptionEn"
+            formControlName="descriptionEn"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_rating" jhiTranslate="kNetworkAdminApp.cryptoBroker.rating">Rating</label>
           <input type="number" class="form-control" name="rating" id="field_rating" data-cy="rating" formControlName="rating" />
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_features" jhiTranslate="forexBeApp.cryptoBroker.features">Features</label>
-          <textarea class="form-control" name="features" id="field_features" data-cy="features" formControlName="features"></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_regulation" jhiTranslate="forexBeApp.cryptoBroker.regulation">Regulation</label>
+          <label class="form-label" for="field_regulation" jhiTranslate="kNetworkAdminApp.cryptoBroker.regulation">Regulation</label>
           <input
             type="text"
             class="form-control"
@@ -87,7 +89,7 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_minDeposit" jhiTranslate="forexBeApp.cryptoBroker.minDeposit">Min Deposit</label>
+          <label class="form-label" for="field_minDeposit" jhiTranslate="kNetworkAdminApp.cryptoBroker.minDeposit">Min Deposit</label>
           <input
             type="text"
             class="form-control"
@@ -99,7 +101,7 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_tradingFees" jhiTranslate="forexBeApp.cryptoBroker.tradingFees">Trading Fees</label>
+          <label class="form-label" for="field_tradingFees" jhiTranslate="kNetworkAdminApp.cryptoBroker.tradingFees">Trading Fees</label>
           <input
             type="text"
             class="form-control"
@@ -111,33 +113,12 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_supportedCoins" jhiTranslate="forexBeApp.cryptoBroker.supportedCoins">Supported Coins</label>
-          <textarea
-            class="form-control"
-            name="supportedCoins"
-            id="field_supportedCoins"
-            data-cy="supportedCoins"
-            formControlName="supportedCoins"
-          ></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_pros" jhiTranslate="forexBeApp.cryptoBroker.pros">Pros</label>
-          <textarea class="form-control" name="pros" id="field_pros" data-cy="pros" formControlName="pros"></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_cons" jhiTranslate="forexBeApp.cryptoBroker.cons">Cons</label>
-          <textarea class="form-control" name="cons" id="field_cons" data-cy="cons" formControlName="cons"></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_founded" jhiTranslate="forexBeApp.cryptoBroker.founded">Founded</label>
+          <label class="form-label" for="field_founded" jhiTranslate="kNetworkAdminApp.cryptoBroker.founded">Founded</label>
           <input type="text" class="form-control" name="founded" id="field_founded" data-cy="founded" formControlName="founded" />
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_headquarters" jhiTranslate="forexBeApp.cryptoBroker.headquarters">Headquarters</label>
+          <label class="form-label" for="field_headquarters" jhiTranslate="kNetworkAdminApp.cryptoBroker.headquarters">Headquarters</label>
           <input
             type="text"
             class="form-control"
@@ -149,7 +130,23 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_tradingVolume" jhiTranslate="forexBeApp.cryptoBroker.tradingVolume">Trading Volume</label>
+          <label class="form-label" for="field_headquartersEn" jhiTranslate="kNetworkAdminApp.cryptoBroker.headquartersEn"
+            >Headquarters En</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="headquartersEn"
+            id="field_headquartersEn"
+            data-cy="headquartersEn"
+            formControlName="headquartersEn"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tradingVolume" jhiTranslate="kNetworkAdminApp.cryptoBroker.tradingVolume"
+            >Trading Volume</label
+          >
           <input
             type="text"
             class="form-control"
@@ -161,49 +158,12 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_securityFeatures" jhiTranslate="forexBeApp.cryptoBroker.securityFeatures"
-            >Security Features</label
-          >
-          <textarea
-            class="form-control"
-            name="securityFeatures"
-            id="field_securityFeatures"
-            data-cy="securityFeatures"
-            formControlName="securityFeatures"
-          ></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_paymentMethods" jhiTranslate="forexBeApp.cryptoBroker.paymentMethods">Payment Methods</label>
-          <textarea
-            class="form-control"
-            name="paymentMethods"
-            id="field_paymentMethods"
-            data-cy="paymentMethods"
-            formControlName="paymentMethods"
-          ></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_customerSupport" jhiTranslate="forexBeApp.cryptoBroker.customerSupport"
-            >Customer Support</label
-          >
-          <textarea
-            class="form-control"
-            name="customerSupport"
-            id="field_customerSupport"
-            data-cy="customerSupport"
-            formControlName="customerSupport"
-          ></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label" for="field_mobileApp" jhiTranslate="forexBeApp.cryptoBroker.mobileApp">Mobile App</label>
+          <label class="form-label" for="field_mobileApp" jhiTranslate="kNetworkAdminApp.cryptoBroker.mobileApp">Mobile App</label>
           <input type="checkbox" class="form-check" name="mobileApp" id="field_mobileApp" data-cy="mobileApp" formControlName="mobileApp" />
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_apiSupport" jhiTranslate="forexBeApp.cryptoBroker.apiSupport">Api Support</label>
+          <label class="form-label" for="field_apiSupport" jhiTranslate="kNetworkAdminApp.cryptoBroker.apiSupport">Api Support</label>
           <input
             type="checkbox"
             class="form-check"
@@ -215,7 +175,7 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="field_detailedDescription" jhiTranslate="forexBeApp.cryptoBroker.detailedDescription"
+          <label class="form-label" for="field_detailedDescription" jhiTranslate="kNetworkAdminApp.cryptoBroker.detailedDescription"
             >Detailed Description</label
           >
           <textarea
@@ -225,6 +185,138 @@
             data-cy="detailedDescription"
             formControlName="detailedDescription"
           ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_detailedDescriptionEn" jhiTranslate="kNetworkAdminApp.cryptoBroker.detailedDescriptionEn"
+            >Detailed Description En</label
+          >
+          <textarea
+            class="form-control"
+            name="detailedDescriptionEn"
+            id="field_detailedDescriptionEn"
+            data-cy="detailedDescriptionEn"
+            formControlName="detailedDescriptionEn"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_cryptoFeatures" jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoFeatures">Crypto Features</label>
+          <select
+            class="form-control"
+            id="field_cryptoFeatures"
+            data-cy="cryptoFeatures"
+            multiple
+            name="cryptoFeatures"
+            formControlName="cryptoFeatures"
+            [compareWith]="compareCryptoFeature"
+          >
+            @for (cryptoFeatureOption of cryptoFeaturesSharedCollection; track $index) {
+              <option [ngValue]="cryptoFeatureOption">{{ cryptoFeatureOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_supportedCoins" jhiTranslate="kNetworkAdminApp.cryptoBroker.supportedCoins">Supported Coins</label>
+          <select
+            class="form-control"
+            id="field_supportedCoins"
+            data-cy="supportedCoins"
+            multiple
+            name="supportedCoins"
+            formControlName="supportedCoins"
+            [compareWith]="compareCoin"
+          >
+            @for (coinOption of coinsSharedCollection; track $index) {
+              <option [ngValue]="coinOption">{{ coinOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_cryptoPros" jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoPros">Crypto Pros</label>
+          <select
+            class="form-control"
+            id="field_cryptoPros"
+            data-cy="cryptoPros"
+            multiple
+            name="cryptoPros"
+            formControlName="cryptoPros"
+            [compareWith]="compareCryptoPro"
+          >
+            @for (cryptoProOption of cryptoProsSharedCollection; track $index) {
+              <option [ngValue]="cryptoProOption">{{ cryptoProOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_cryptoCons" jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoCons">Crypto Cons</label>
+          <select
+            class="form-control"
+            id="field_cryptoCons"
+            data-cy="cryptoCons"
+            multiple
+            name="cryptoCons"
+            formControlName="cryptoCons"
+            [compareWith]="compareCryptoCon"
+          >
+            @for (cryptoConOption of cryptoConsSharedCollection; track $index) {
+              <option [ngValue]="cryptoConOption">{{ cryptoConOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_securityFeatures" jhiTranslate="kNetworkAdminApp.cryptoBroker.securityFeatures">Security Features</label>
+          <select
+            class="form-control"
+            id="field_securityFeatures"
+            data-cy="securityFeatures"
+            multiple
+            name="securityFeatures"
+            formControlName="securityFeatures"
+            [compareWith]="compareSecurityFeature"
+          >
+            @for (securityFeatureOption of securityFeaturesSharedCollection; track $index) {
+              <option [ngValue]="securityFeatureOption">{{ securityFeatureOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_paymentMethods" jhiTranslate="kNetworkAdminApp.cryptoBroker.paymentMethods">Payment Methods</label>
+          <select
+            class="form-control"
+            id="field_paymentMethods"
+            data-cy="paymentMethods"
+            multiple
+            name="paymentMethods"
+            formControlName="paymentMethods"
+            [compareWith]="compareCryptoPaymentMethod"
+          >
+            @for (cryptoPaymentMethodOption of cryptoPaymentMethodsSharedCollection; track $index) {
+              <option [ngValue]="cryptoPaymentMethodOption">{{ cryptoPaymentMethodOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_customerSupports" jhiTranslate="kNetworkAdminApp.cryptoBroker.customerSupports">Customer Supports</label>
+          <select
+            class="form-control"
+            id="field_customerSupports"
+            data-cy="customerSupports"
+            multiple
+            name="customerSupports"
+            formControlName="customerSupports"
+            [compareWith]="compareCustomerSupport"
+          >
+            @for (customerSupportOption of customerSupportsSharedCollection; track $index) {
+              <option [ngValue]="customerSupportOption">{{ customerSupportOption.value }}</option>
+            }
+          </select>
         </div>
       </div>
 

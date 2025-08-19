@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="InstrumentHeading">
-    <span jhiTranslate="forexBeApp.instrument.home.title">Instruments</span>
+    <span jhiTranslate="kNetworkAdminApp.instrument.home.title">Instruments</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
         <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
-        <span jhiTranslate="forexBeApp.instrument.home.refreshListLabel">Refresh list</span>
+        <span jhiTranslate="kNetworkAdminApp.instrument.home.refreshListLabel">Refresh list</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/instrument/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="forexBeApp.instrument.home.createLabel">Create a new Instrument</span>
+        <span jhiTranslate="kNetworkAdminApp.instrument.home.createLabel">Create a new Instrument</span>
       </button>
     </div>
   </h2>
@@ -26,7 +26,7 @@
 
   @if (instruments().length === 0) {
     <div class="alert alert-warning" id="no-result">
-      <span jhiTranslate="forexBeApp.instrument.home.notFound">No Instruments found</span>
+      <span jhiTranslate="kNetworkAdminApp.instrument.home.notFound">No Instruments found</span>
     </div>
   } @else {
     <div class="table-responsive table-entities" id="entities">
@@ -40,16 +40,17 @@
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
-            <th scope="col" jhiSortBy="name">
+            <th scope="col" jhiSortBy="value">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.instrument.name">Name</span>
+                <span jhiTranslate="kNetworkAdminApp.instrument.value">Value</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
-            <th scope="col" jhiSortBy="broker.id">
+            <th scope="col" jhiSortBy="valueEn">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.instrument.broker">Broker</span>
+                <span jhiTranslate="kNetworkAdminApp.instrument.valueEn">Value En</span>
+
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
@@ -62,14 +63,8 @@
               <td>
                 <a [routerLink]="['/instrument', instrument.id, 'view']">{{ instrument.id }}</a>
               </td>
-              <td>{{ instrument.name }}</td>
-              <td>
-                @if (instrument.broker) {
-                  <div>
-                    <a [routerLink]="['/broker', instrument.broker.id, 'view']">{{ instrument.broker.id }}</a>
-                  </div>
-                }
-              </td>
+              <td>{{ instrument.value }}</td>
+              <td>{{ instrument.valueEn }}</td>
               <td class="text-end">
                 <div class="btn-group">
                   <a [routerLink]="['/instrument', instrument.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">

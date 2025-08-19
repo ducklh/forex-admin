@@ -20,8 +20,8 @@ describe('Feature Form Service', () => {
         expect(formGroup.controls).toEqual(
           expect.objectContaining({
             id: expect.any(Object),
-            name: expect.any(Object),
-            broker: expect.any(Object),
+            value: expect.any(Object),
+            valueEn: expect.any(Object),
           }),
         );
       });
@@ -32,8 +32,8 @@ describe('Feature Form Service', () => {
         expect(formGroup.controls).toEqual(
           expect.objectContaining({
             id: expect.any(Object),
-            name: expect.any(Object),
-            broker: expect.any(Object),
+            value: expect.any(Object),
+            valueEn: expect.any(Object),
           }),
         );
       });

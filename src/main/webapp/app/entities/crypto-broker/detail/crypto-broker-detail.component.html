@@ -2,7 +2,7 @@
   <div class="col-8">
     @if (cryptoBroker(); as cryptoBrokerRef) {
       <div>
-        <h2 data-cy="cryptoBrokerDetailsHeading"><span jhiTranslate="forexBeApp.cryptoBroker.detail.title">Crypto Broker</span></h2>
+        <h2 data-cy="cryptoBrokerDetailsHeading"><span jhiTranslate="kNetworkAdminApp.cryptoBroker.detail.title">Crypto Broker</span></h2>
 
         <hr />
 
@@ -15,89 +15,140 @@
           <dd>
             <span>{{ cryptoBrokerRef.id }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.name">Name</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.name">Name</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.name }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.logo">Logo</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.nameEn">Name En</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.nameEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.logo">Logo</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.logo }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.url">Url</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.url">Url</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.url }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.description">Description</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.description">Description</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.description }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.rating">Rating</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.descriptionEn">Description En</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.descriptionEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.rating">Rating</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.rating }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.features">Features</span></dt>
-          <dd>
-            <span>{{ cryptoBrokerRef.features }}</span>
-          </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.regulation">Regulation</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.regulation">Regulation</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.regulation }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.minDeposit">Min Deposit</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.minDeposit">Min Deposit</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.minDeposit }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.tradingFees">Trading Fees</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.tradingFees">Trading Fees</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.tradingFees }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.supportedCoins">Supported Coins</span></dt>
-          <dd>
-            <span>{{ cryptoBrokerRef.supportedCoins }}</span>
-          </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.pros">Pros</span></dt>
-          <dd>
-            <span>{{ cryptoBrokerRef.pros }}</span>
-          </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.cons">Cons</span></dt>
-          <dd>
-            <span>{{ cryptoBrokerRef.cons }}</span>
-          </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.founded">Founded</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.founded">Founded</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.founded }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.headquarters">Headquarters</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.headquarters">Headquarters</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.headquarters }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.tradingVolume">Trading Volume</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.headquartersEn">Headquarters En</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.headquartersEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.tradingVolume">Trading Volume</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.tradingVolume }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.securityFeatures">Security Features</span></dt>
-          <dd>
-            <span>{{ cryptoBrokerRef.securityFeatures }}</span>
-          </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.paymentMethods">Payment Methods</span></dt>
-          <dd>
-            <span>{{ cryptoBrokerRef.paymentMethods }}</span>
-          </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.customerSupport">Customer Support</span></dt>
-          <dd>
-            <span>{{ cryptoBrokerRef.customerSupport }}</span>
-          </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.mobileApp">Mobile App</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.mobileApp">Mobile App</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.mobileApp }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.apiSupport">Api Support</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.apiSupport">Api Support</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.apiSupport }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.cryptoBroker.detailedDescription">Detailed Description</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.detailedDescription">Detailed Description</span></dt>
           <dd>
             <span>{{ cryptoBrokerRef.detailedDescription }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.detailedDescriptionEn">Detailed Description En</span></dt>
+          <dd>
+            <span>{{ cryptoBrokerRef.detailedDescriptionEn }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoFeatures">Crypto Features</span></dt>
+          <dd>
+            @for (cryptoFeatures of cryptoBrokerRef.cryptoFeatures; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/crypto-feature', cryptoFeatures.id, 'view']">{{ cryptoFeatures?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.supportedCoins">Supported Coins</span></dt>
+          <dd>
+            @for (supportedCoins of cryptoBrokerRef.supportedCoins; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/coin', supportedCoins.id, 'view']">{{ supportedCoins?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoPros">Crypto Pros</span></dt>
+          <dd>
+            @for (cryptoPros of cryptoBrokerRef.cryptoPros; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/crypto-pro', cryptoPros.id, 'view']">{{ cryptoPros?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoCons">Crypto Cons</span></dt>
+          <dd>
+            @for (cryptoCons of cryptoBrokerRef.cryptoCons; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/crypto-con', cryptoCons.id, 'view']">{{ cryptoCons?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.securityFeatures">Security Features</span></dt>
+          <dd>
+            @for (securityFeatures of cryptoBrokerRef.securityFeatures; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/security-feature', securityFeatures.id, 'view']">{{ securityFeatures?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.paymentMethods">Payment Methods</span></dt>
+          <dd>
+            @for (paymentMethods of cryptoBrokerRef.paymentMethods; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/crypto-payment-method', paymentMethods.id, 'view']">{{ paymentMethods?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoBroker.customerSupports">Customer Supports</span></dt>
+          <dd>
+            @for (customerSupports of cryptoBrokerRef.customerSupports; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/customer-support', customerSupports.id, 'view']">{{ customerSupports?.value }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
           </dd>
         </dl>
 

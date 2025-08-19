@@ -1,43 +1,156 @@
-entity Broker {
+/* ====== Entities for Forex Broker ====== */
+entity ForexBroker {
     name String required,
-  logo String,
-  url String,
-  description TextBlob,
-  rating Double,
-  minDeposit BigDecimal,
-  spreads String,
-  leverage String,
-  founded Integer,
-  headquarters String
+    nameEn String,
+    logo String,
+    url String,
+    description TextBlob,
+    descriptionEn TextBlob,
+    rating BigDecimal,
+    regulation String, // KHÔNG cần En
+    minDeposit String, // KHÔNG cần En
+    spreads String, // KHÔNG cần En
+    leverage String, // KHÔNG cần En
+    founded String, // KHÔNG cần En
+    headquarters String,
+    headquartersEn String
 }
 entity Feature {
-    name String required
-}
-entity Regulation {
-    authority String required
+    value String required,
+    valueEn String
 }
 entity Platform {
-    name String required
+    value String required,
+    valueEn String
 }
 entity Instrument {
-    name String required
+    value String required,
+    valueEn String
 }
 entity Pro {
-    text String required
+    value String required,
+    valueEn String
 }
 entity Con {
-    text String required
+    value String required,
+    valueEn String
 }
-entity Language {
-    code String required,
-  name String required
+entity LanguageSupport {
+    value String required,
+    valueEn String
 }
 entity Support {
-    type String required
+    value String required,
+    valueEn String
 }
 entity PaymentMethod {
-    name String required
+    value String required,
+    valueEn String
 }
-relationship OneToMany {
-    Broker{features} to Feature , Broker{regulations} to Regulation , Broker{platforms} to Platform , Broker{instruments} to Instrument , Broker{pros} to Pro , Broker{cons} to Con , Broker{languages} to Language , Broker{supports} to Support , Broker{paymentMethods} to PaymentMethod
+/* ===== Relationships for ForexBroker ===== */
+relationship ManyToMany {
+    ForexBroker{forexFeatures(value)} to Feature{forexBrokers} , ForexBroker{forexPlatforms(value)} to Platform{forexBrokers} , ForexBroker{forexInstruments(value)} to Instrument{forexBrokers} , ForexBroker{forexPros(value)} to Pro{forexBrokers} , ForexBroker{forexCons(value)} to Con{forexBrokers} , ForexBroker{forexLanguages(value)} to LanguageSupport{forexBrokers} , ForexBroker{forexSupports(value)} to Support{forexBrokers} , ForexBroker{forexPaymentMethods(value)} to PaymentMethod{forexBrokers}
+}
+/* ====== Entities for Crypto Broker ====== */
+entity CryptoBroker {
+    name String required,
+    nameEn String,
+    logo String,
+    url String,
+    description TextBlob,
+    descriptionEn TextBlob,
+    rating BigDecimal,
+    regulation String, // KHÔNG cần En
+    minDeposit String, // KHÔNG cần En
+    tradingFees String, // KHÔNG cần En
+    founded String, // KHÔNG cần En
+    headquarters String,
+    headquartersEn String,
+    tradingVolume String, // KHÔNG cần En
+    mobileApp Boolean,
+    apiSupport Boolean,
+    detailedDescription TextBlob,
+    detailedDescriptionEn TextBlob
+}
+entity Coin {
+    value String required,
+    valueEn String
+}
+entity CryptoFeature {
+    value String required,
+    valueEn String
+}
+entity CryptoPro {
+    value String required,
+    valueEn String
+}
+entity CryptoCon {
+    value String required,
+    valueEn String
+}
+entity SecurityFeature {
+    value String required,
+    valueEn String
+}
+entity CryptoPaymentMethod {
+    value String required,
+    valueEn String
+}
+entity CustomerSupport {
+    value String required,
+    valueEn String
+}
+/* ===== Relationships for CryptoBroker ===== */
+relationship ManyToMany {
+    CryptoBroker{cryptoFeatures(value)} to CryptoFeature{cryptoBrokers} , CryptoBroker{supportedCoins(value)} to Coin{cryptoBrokers} , CryptoBroker{cryptoPros(value)} to CryptoPro{cryptoBrokers} , CryptoBroker{cryptoCons(value)} to CryptoCon{cryptoBrokers} , CryptoBroker{securityFeatures(value)} to SecurityFeature{cryptoBrokers} , CryptoBroker{paymentMethods(value)} to CryptoPaymentMethod{cryptoBrokers} , CryptoBroker{customerSupports(value)} to CustomerSupport{cryptoBrokers}
+}
+entity Tag {
+    value String required,
+    valueEn String
+}
+/* ====== Entities for Knowledge Item ====== */
+entity KnowledgeItem {
+    title String required,
+    titleEn String,
+    excerpt String,
+    excerptEn String,
+    content TextBlob,
+    contentEn TextBlob,
+    category String,
+    categoryEn String,
+    level String,
+    levelEn String,
+    author String, // KHÔNG cần En
+    publishedAt Instant, // KHÔNG cần En
+    readTime Integer, // KHÔNG cần En
+    image String // KHÔNG cần En
+}
+entity KnowledgeTag {
+    value String required,
+    valueEn String
+}
+/* ===== Relationship for KnowledgeItem ===== */
+relationship ManyToMany {
+    KnowledgeItem{tags(value)} to KnowledgeTag{knowledgeItems}
+}
+/* ====== Entities for Site News Article ====== */
+entity SiteNewsArticle {
+    title String required,
+    titleEn String,
+    excerpt String,
+    excerptEn String,
+    content TextBlob,
+    contentEn TextBlob,
+    category String,
+    categoryEn String,
+    author String, // KHÔNG cần En
+    publishedAt Instant, // KHÔNG cần En
+    readTime String, // KHÔNG cần En
+    image String, // KHÔNG cần En
+    fullContent TextBlob,
+    fullContentEn TextBlob
+}
+/* Reuse Tag entity for SiteNewsArticle */
+relationship ManyToMany {
+    SiteNewsArticle{tags(value)} to Tag{siteNewsArticles}
 }

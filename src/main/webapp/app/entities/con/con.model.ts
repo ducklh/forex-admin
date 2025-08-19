@@ -1,9 +1,7 @@
-import { IBroker } from 'app/entities/broker/broker.model';
-
 export interface ICon {
   id: string;
-  text?: string | null;
-  broker?: IBroker | null;
+  value?: string | null;
+  valueEn?: string | null;
 }
 
 export type NewCon = Omit<ICon, 'id'> & { id: null };

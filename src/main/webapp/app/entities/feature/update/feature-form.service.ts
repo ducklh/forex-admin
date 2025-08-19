@@ -18,8 +18,8 @@ type FeatureFormDefaults = Pick<NewFeature, 'id'>;
 
 type FeatureFormGroupContent = {
   id: FormControl<IFeature['id'] | NewFeature['id']>;
-  name: FormControl<IFeature['name']>;
-  broker: FormControl<IFeature['broker']>;
+  value: FormControl<IFeature['value']>;
+  valueEn: FormControl<IFeature['valueEn']>;
 };
 
 export type FeatureFormGroup = FormGroup<FeatureFormGroupContent>;
@@ -39,10 +39,10 @@ export class FeatureFormService {
           validators: [Validators.required],
         },
       ),
-      name: new FormControl(featureRawValue.name, {
+      value: new FormControl(featureRawValue.value, {
         validators: [Validators.required],
       }),
-      broker: new FormControl(featureRawValue.broker),
+      valueEn: new FormControl(featureRawValue.valueEn),
     });
   }
 

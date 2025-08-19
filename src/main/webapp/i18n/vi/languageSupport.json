@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "languageSupport": {
+      "home": {
+        "title": "Language Supports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Language Support",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Language Support",
+        "notFound": "No Language Supports found"
+      },
+      "created": "Một Language Support mới được tạo với định danh {{ param }}",
+      "updated": "Một Language Support cập nhật với định danh {{ param }}",
+      "deleted": "Một Language Support đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Language Support {{ id }}?"
+      },
+      "detail": {
+        "title": "Language Support"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "forexBrokers": "Forex Brokers"
+    }
+  }
+}

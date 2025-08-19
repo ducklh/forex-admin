@@ -1,0 +1,202 @@
+<div>
+  <h2 id="page-heading" data-cy="KnowledgeItemHeading">
+    <span jhiTranslate="kNetworkAdminApp.knowledgeItem.home.title">Knowledge Items</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.knowledgeItem.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-knowledge-item"
+        [routerLink]="['/knowledge-item/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.knowledgeItem.home.createLabel">Create a new Knowledge Item</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (knowledgeItems().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="kNetworkAdminApp.knowledgeItem.home.notFound">No Knowledge Items found</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="title">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.title">Title</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="titleEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.titleEn">Title En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="excerpt">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.excerpt">Excerpt</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="excerptEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.excerptEn">Excerpt En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="content">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.content">Content</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="contentEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.contentEn">Content En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="category">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.category">Category</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categoryEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.categoryEn">Category En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="level">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.level">Level</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="levelEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.levelEn">Level En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="author">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.author">Author</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="publishedAt">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.publishedAt">Published At</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="readTime">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.readTime">Read Time</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="image">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.image">Image</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tags.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.knowledgeItem.tags">Tags</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (knowledgeItem of knowledgeItems(); track trackId(knowledgeItem)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/knowledge-item', knowledgeItem.id, 'view']">{{ knowledgeItem.id }}</a>
+              </td>
+              <td>{{ knowledgeItem.title }}</td>
+              <td>{{ knowledgeItem.titleEn }}</td>
+              <td>{{ knowledgeItem.excerpt }}</td>
+              <td>{{ knowledgeItem.excerptEn }}</td>
+              <td>{{ knowledgeItem.content }}</td>
+              <td>{{ knowledgeItem.contentEn }}</td>
+              <td>{{ knowledgeItem.category }}</td>
+              <td>{{ knowledgeItem.categoryEn }}</td>
+              <td>{{ knowledgeItem.level }}</td>
+              <td>{{ knowledgeItem.levelEn }}</td>
+              <td>{{ knowledgeItem.author }}</td>
+              <td>{{ knowledgeItem.publishedAt | formatMediumDatetime }}</td>
+              <td>{{ knowledgeItem.readTime }}</td>
+              <td>{{ knowledgeItem.image }}</td>
+              <td>
+                @for (tags of knowledgeItem.tags; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/knowledge-tag', tags.id, 'view']">{{ tags.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/knowledge-item', knowledgeItem.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a [routerLink]="['/knowledge-item', knowledgeItem.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(knowledgeItem)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

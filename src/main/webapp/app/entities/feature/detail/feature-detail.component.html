@@ -2,7 +2,7 @@
   <div class="col-8">
     @if (feature(); as featureRef) {
       <div>
-        <h2 data-cy="featureDetailsHeading"><span jhiTranslate="forexBeApp.feature.detail.title">Feature</span></h2>
+        <h2 data-cy="featureDetailsHeading"><span jhiTranslate="kNetworkAdminApp.feature.detail.title">Feature</span></h2>
 
         <hr />
 
@@ -15,17 +15,13 @@
           <dd>
             <span>{{ featureRef.id }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.feature.name">Name</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.feature.value">Value</span></dt>
           <dd>
-            <span>{{ featureRef.name }}</span>
+            <span>{{ featureRef.value }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.feature.broker">Broker</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.feature.valueEn">Value En</span></dt>
           <dd>
-            @if (feature()!.broker) {
-              <div>
-                <a [routerLink]="['/broker', feature()!.broker?.id, 'view']">{{ featureRef.broker?.id }}</a>
-              </div>
-            }
+            <span>{{ featureRef.valueEn }}</span>
           </dd>
         </dl>
 

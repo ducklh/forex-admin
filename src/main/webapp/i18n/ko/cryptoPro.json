@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "cryptoPro": {
+      "home": {
+        "title": "Crypto Pros",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Crypto Pro",
+        "createOrEditLabel": "Create or edit a Crypto Pro",
+        "notFound": "No Crypto Pros found"
+      },
+      "created": "A new Crypto Pro is created with identifier {{ param }}",
+      "updated": "A Crypto Pro is updated with identifier {{ param }}",
+      "deleted": "A Crypto Pro is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Crypto Pro {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Pro"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

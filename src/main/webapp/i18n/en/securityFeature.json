@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "securityFeature": {
+      "home": {
+        "title": "Security Features",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Security Feature",
+        "createOrEditLabel": "Create or edit a Security Feature",
+        "notFound": "No Security Features found"
+      },
+      "created": "A new Security Feature is created with identifier {{ param }}",
+      "updated": "A Security Feature is updated with identifier {{ param }}",
+      "deleted": "A Security Feature is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Security Feature {{ id }}?"
+      },
+      "detail": {
+        "title": "Security Feature"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

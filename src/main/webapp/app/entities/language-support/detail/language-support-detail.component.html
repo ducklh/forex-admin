@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (languageSupport(); as languageSupportRef) {
+      <div>
+        <h2 data-cy="languageSupportDetailsHeading">
+          <span jhiTranslate="kNetworkAdminApp.languageSupport.detail.title">Language Support</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ languageSupportRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.languageSupport.value">Value</span></dt>
+          <dd>
+            <span>{{ languageSupportRef.value }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.languageSupport.valueEn">Value En</span></dt>
+          <dd>
+            <span>{{ languageSupportRef.valueEn }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/language-support', languageSupportRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

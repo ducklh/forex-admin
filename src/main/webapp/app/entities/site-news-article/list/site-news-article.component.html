@@ -1,0 +1,210 @@
+<div>
+  <h2 id="page-heading" data-cy="SiteNewsArticleHeading">
+    <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.home.title">Site News Articles</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-site-news-article"
+        [routerLink]="['/site-news-article/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.home.createLabel">Create a new Site News Article</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (siteNewsArticles().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.home.notFound">No Site News Articles found</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="title">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.title">Title</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="titleEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.titleEn">Title En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="excerpt">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.excerpt">Excerpt</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="excerptEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.excerptEn">Excerpt En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="content">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.content">Content</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="contentEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.contentEn">Content En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="category">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.category">Category</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categoryEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.categoryEn">Category En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="author">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.author">Author</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="publishedAt">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.publishedAt">Published At</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="readTime">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.readTime">Read Time</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="image">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.image">Image</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="fullContent">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.fullContent">Full Content</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="fullContentEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.fullContentEn">Full Content En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tags.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.siteNewsArticle.tags">Tags</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (siteNewsArticle of siteNewsArticles(); track trackId(siteNewsArticle)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/site-news-article', siteNewsArticle.id, 'view']">{{ siteNewsArticle.id }}</a>
+              </td>
+              <td>{{ siteNewsArticle.title }}</td>
+              <td>{{ siteNewsArticle.titleEn }}</td>
+              <td>{{ siteNewsArticle.excerpt }}</td>
+              <td>{{ siteNewsArticle.excerptEn }}</td>
+              <td>{{ siteNewsArticle.content }}</td>
+              <td>{{ siteNewsArticle.contentEn }}</td>
+              <td>{{ siteNewsArticle.category }}</td>
+              <td>{{ siteNewsArticle.categoryEn }}</td>
+              <td>{{ siteNewsArticle.author }}</td>
+              <td>{{ siteNewsArticle.publishedAt | formatMediumDatetime }}</td>
+              <td>{{ siteNewsArticle.readTime }}</td>
+              <td>{{ siteNewsArticle.image }}</td>
+              <td>{{ siteNewsArticle.fullContent }}</td>
+              <td>{{ siteNewsArticle.fullContentEn }}</td>
+              <td>
+                @for (tags of siteNewsArticle.tags; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/tag', tags.id, 'view']">{{ tags.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/site-news-article', siteNewsArticle.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/site-news-article', siteNewsArticle.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(siteNewsArticle)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

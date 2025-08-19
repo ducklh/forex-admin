@@ -18,7 +18,7 @@ logging:
     ROOT: DEBUG
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
-    com.knetwork.forex: DEBUG
+    com.actionnow.knetwork: DEBUG
 
 spring:
   devtools:
@@ -32,7 +32,7 @@ spring:
       indent-output: true
   data:
     mongodb:
-      uri: mongodb://localhost:27017/forexBe
+      uri: mongodb://localhost:27017/kNetworkAdmin
   mail:
     host: localhost
     port: 25
@@ -70,7 +70,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: NzZkZGE4OGU0YTFmNjFhNzJiN2U1NTZkM2M2NWJkZDIyNzE2MzdiMzI2MGE4YzAyODg1Y2FkOTc0MDI4NWUxN2M5YjI4YTQxNjFlOTE1MTBmNzQ1MDI5N2NkMWU4N2MzM2VkYzVhYWY4YjczYTM5YzcyODc2MDg4NGFlYTI3ODU=
+        base64-secret: YTlhZWZjODQyMGRmNzliNmFjMWZjMGYxMjY2OGYwY2IwYmZmMjVhZWI5N2Q5M2MwMzc0MDdkNmY4MGVjYjRiNDhjNGEyZmQ5YjQ1NzMyMjBmM2UwNDRiZGRhNGQ4ZGM0MjJkNmE2YmI3NjlkZWI4YzMzZjUwMWFiMTg4YTgxM2E=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

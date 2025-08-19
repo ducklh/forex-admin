@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "securityFeature": {
+      "home": {
+        "title": "Security Features",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Security Feature",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Security Feature",
+        "notFound": "No Security Features found"
+      },
+      "created": "Một Security Feature mới được tạo với định danh {{ param }}",
+      "updated": "Một Security Feature cập nhật với định danh {{ param }}",
+      "deleted": "Một Security Feature đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Security Feature {{ id }}?"
+      },
+      "detail": {
+        "title": "Security Feature"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

@@ -2,7 +2,7 @@
   <div class="col-8">
     @if (platform(); as platformRef) {
       <div>
-        <h2 data-cy="platformDetailsHeading"><span jhiTranslate="forexBeApp.platform.detail.title">Platform</span></h2>
+        <h2 data-cy="platformDetailsHeading"><span jhiTranslate="kNetworkAdminApp.platform.detail.title">Platform</span></h2>
 
         <hr />
 
@@ -15,17 +15,13 @@
           <dd>
             <span>{{ platformRef.id }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.platform.name">Name</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.platform.value">Value</span></dt>
           <dd>
-            <span>{{ platformRef.name }}</span>
+            <span>{{ platformRef.value }}</span>
           </dd>
-          <dt><span jhiTranslate="forexBeApp.platform.broker">Broker</span></dt>
+          <dt><span jhiTranslate="kNetworkAdminApp.platform.valueEn">Value En</span></dt>
           <dd>
-            @if (platform()!.broker) {
-              <div>
-                <a [routerLink]="['/broker', platform()!.broker?.id, 'view']">{{ platformRef.broker?.id }}</a>
-              </div>
-            }
+            <span>{{ platformRef.valueEn }}</span>
           </dd>
         </dl>
 

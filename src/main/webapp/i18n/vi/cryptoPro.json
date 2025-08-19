@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "cryptoPro": {
+      "home": {
+        "title": "Crypto Pros",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Crypto Pro",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Crypto Pro",
+        "notFound": "No Crypto Pros found"
+      },
+      "created": "Một Crypto Pro mới được tạo với định danh {{ param }}",
+      "updated": "Một Crypto Pro cập nhật với định danh {{ param }}",
+      "deleted": "Một Crypto Pro đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Crypto Pro {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Pro"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

@@ -1,16 +1,28 @@
 {
   "annotations": {
-    "changelogDate": "20250814153454"
+    "changelogDate": "20250819162934"
   },
   "applications": "*",
   "fields": [
     {
-      "fieldName": "name",
+      "fieldName": "value",
       "fieldType": "String",
       "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valueEn",
+      "fieldType": "String"
     }
   ],
   "name": "Platform",
-  "relationships": [],
+  "relationships": [
+    {
+      "otherEntityName": "forexBroker",
+      "otherEntityRelationshipName": "forexPlatforms",
+      "relationshipName": "forexBrokers",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
   "searchEngine": "no"
 }

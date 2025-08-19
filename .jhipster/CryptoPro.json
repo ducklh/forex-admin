@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20250819162944"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "value",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "valueEn",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CryptoPro",
+  "relationships": [
+    {
+      "otherEntityName": "cryptoBroker",
+      "otherEntityRelationshipName": "cryptoPros",
+      "relationshipName": "cryptoBrokers",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

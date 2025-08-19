@@ -1,0 +1,38 @@
+{
+  "kNetworkAdminApp": {
+    "siteNewsArticle": {
+      "home": {
+        "title": "Site News Articles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Site News Article",
+        "createOrEditLabel": "Create or edit a Site News Article",
+        "notFound": "No Site News Articles found"
+      },
+      "created": "A new Site News Article is created with identifier {{ param }}",
+      "updated": "A Site News Article is updated with identifier {{ param }}",
+      "deleted": "A Site News Article is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Site News Article {{ id }}?"
+      },
+      "detail": {
+        "title": "Site News Article"
+      },
+      "id": "ID",
+      "title": "Title",
+      "titleEn": "Title En",
+      "excerpt": "Excerpt",
+      "excerptEn": "Excerpt En",
+      "content": "Content",
+      "contentEn": "Content En",
+      "category": "Category",
+      "categoryEn": "Category En",
+      "author": "Author",
+      "publishedAt": "Published At",
+      "readTime": "Read Time",
+      "image": "Image",
+      "fullContent": "Full Content",
+      "fullContentEn": "Full Content En",
+      "tags": "Tags"
+    }
+  }
+}

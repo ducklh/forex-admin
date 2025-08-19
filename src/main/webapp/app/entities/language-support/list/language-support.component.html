@@ -1,0 +1,100 @@
+<div>
+  <h2 id="page-heading" data-cy="LanguageSupportHeading">
+    <span jhiTranslate="kNetworkAdminApp.languageSupport.home.title">Language Supports</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.languageSupport.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-language-support"
+        [routerLink]="['/language-support/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="kNetworkAdminApp.languageSupport.home.createLabel">Create a new Language Support</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (languageSupports().length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="kNetworkAdminApp.languageSupport.home.notFound">No Language Supports found</span>
+    </div>
+  } @else {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(sortState)]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.languageSupport.value">Value</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="valueEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.languageSupport.valueEn">Value En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (languageSupport of languageSupports(); track trackId(languageSupport)) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/language-support', languageSupport.id, 'view']">{{ languageSupport.id }}</a>
+              </td>
+              <td>{{ languageSupport.value }}</td>
+              <td>{{ languageSupport.valueEn }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/language-support', languageSupport.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/language-support', languageSupport.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(languageSupport)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

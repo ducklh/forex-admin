@@ -1,6 +1,6 @@
 {
   "annotations": {
-    "changelogDate": "20250814155108"
+    "changelogDate": "20250819162941"
   },
   "applications": "*",
   "fields": [
@@ -8,6 +8,10 @@
       "fieldName": "name",
       "fieldType": "String",
       "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
     },
     {
       "fieldName": "logo",
@@ -19,17 +23,15 @@
     },
     {
       "fieldName": "description",
-      "fieldType": "String",
-      "fieldValidateRules": ["maxlength"],
-      "fieldValidateRulesMaxlength": "500"
+      "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "descriptionEn",
+      "fieldType": "TextBlob"
     },
     {
       "fieldName": "rating",
       "fieldType": "BigDecimal"
-    },
-    {
-      "fieldName": "features",
-      "fieldType": "TextBlob"
     },
     {
       "fieldName": "regulation",
@@ -44,18 +46,6 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "supportedCoins",
-      "fieldType": "TextBlob"
-    },
-    {
-      "fieldName": "pros",
-      "fieldType": "TextBlob"
-    },
-    {
-      "fieldName": "cons",
-      "fieldType": "TextBlob"
-    },
-    {
       "fieldName": "founded",
       "fieldType": "String"
     },
@@ -64,20 +54,12 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "tradingVolume",
+      "fieldName": "headquartersEn",
       "fieldType": "String"
     },
     {
-      "fieldName": "securityFeatures",
-      "fieldType": "TextBlob"
-    },
-    {
-      "fieldName": "paymentMethods",
-      "fieldType": "TextBlob"
-    },
-    {
-      "fieldName": "customerSupport",
-      "fieldType": "TextBlob"
+      "fieldName": "tradingVolume",
+      "fieldType": "String"
     },
     {
       "fieldName": "mobileApp",
@@ -90,9 +72,70 @@
     {
       "fieldName": "detailedDescription",
       "fieldType": "TextBlob"
+    },
+    {
+      "fieldName": "detailedDescriptionEn",
+      "fieldType": "TextBlob"
     }
   ],
   "name": "CryptoBroker",
-  "relationships": [],
+  "relationships": [
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "cryptoFeature",
+      "otherEntityRelationshipName": "cryptoBrokers",
+      "relationshipName": "cryptoFeatures",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "coin",
+      "otherEntityRelationshipName": "cryptoBrokers",
+      "relationshipName": "supportedCoins",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "cryptoPro",
+      "otherEntityRelationshipName": "cryptoBrokers",
+      "relationshipName": "cryptoPros",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "cryptoCon",
+      "otherEntityRelationshipName": "cryptoBrokers",
+      "relationshipName": "cryptoCons",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "securityFeature",
+      "otherEntityRelationshipName": "cryptoBrokers",
+      "relationshipName": "securityFeatures",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "cryptoPaymentMethod",
+      "otherEntityRelationshipName": "cryptoBrokers",
+      "relationshipName": "paymentMethods",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "value",
+      "otherEntityName": "customerSupport",
+      "otherEntityRelationshipName": "cryptoBrokers",
+      "relationshipName": "customerSupports",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
   "searchEngine": "no"
 }

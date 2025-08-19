@@ -18,8 +18,8 @@ type InstrumentFormDefaults = Pick<NewInstrument, 'id'>;
 
 type InstrumentFormGroupContent = {
   id: FormControl<IInstrument['id'] | NewInstrument['id']>;
-  name: FormControl<IInstrument['name']>;
-  broker: FormControl<IInstrument['broker']>;
+  value: FormControl<IInstrument['value']>;
+  valueEn: FormControl<IInstrument['valueEn']>;
 };
 
 export type InstrumentFormGroup = FormGroup<InstrumentFormGroupContent>;
@@ -39,10 +39,10 @@ export class InstrumentFormService {
           validators: [Validators.required],
         },
       ),
-      name: new FormControl(instrumentRawValue.name, {
+      value: new FormControl(instrumentRawValue.value, {
         validators: [Validators.required],
       }),
-      broker: new FormControl(instrumentRawValue.broker),
+      valueEn: new FormControl(instrumentRawValue.valueEn),
     });
   }
 

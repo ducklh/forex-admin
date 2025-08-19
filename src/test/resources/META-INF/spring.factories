@@ -1,2 +1,2 @@
 org.springframework.test.context.ContextCustomizerFactory = \
-    com.knetwork.forex.config.TestContainersSpringContextCustomizerFactory
+    com.actionnow.knetwork.config.TestContainersSpringContextCustomizerFactory

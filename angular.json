@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "forex-be": {
+    "k-network-admin": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -82,15 +82,15 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "buildTarget": "forex-be:build:development",
+            "buildTarget": "k-network-admin:build:development",
             "port": 4200
           },
           "configurations": {
             "production": {
-              "buildTarget": "forex-be:build:production"
+              "buildTarget": "k-network-admin:build:production"
             },
             "development": {
-              "buildTarget": "forex-be:build:development"
+              "buildTarget": "k-network-admin:build:development"
             }
           },
           "defaultConfiguration": "development"

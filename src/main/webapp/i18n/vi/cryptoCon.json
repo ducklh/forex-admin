@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "cryptoCon": {
+      "home": {
+        "title": "Crypto Cons",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Crypto Con",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Crypto Con",
+        "notFound": "No Crypto Cons found"
+      },
+      "created": "Một Crypto Con mới được tạo với định danh {{ param }}",
+      "updated": "Một Crypto Con cập nhật với định danh {{ param }}",
+      "deleted": "Một Crypto Con đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Crypto Con {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Con"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

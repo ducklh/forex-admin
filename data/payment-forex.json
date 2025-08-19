@@ -1,0 +1,92 @@
+[
+  {
+    "value": "Thẻ tín dụng/Ghi nợ",
+    "value_en": "Credit/Debit Card",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Chuyển khoản ngân hàng",
+    "value_en": "Bank Transfer",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Ví điện tử",
+    "value_en": "E-wallets",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "PayPal",
+    "value_en": "PayPal",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Skrill",
+    "value_en": "Skrill",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Neteller",
+    "value_en": "Neteller",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "UnionPay",
+    "value_en": "UnionPay",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Bitcoin",
+    "value_en": "Bitcoin",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Ethereum",
+    "value_en": "Ethereum",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "USDT (Tether)",
+    "value_en": "USDT (Tether)",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Visa",
+    "value_en": "Visa",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Mastercard",
+    "value_en": "Mastercard",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "American Express",
+    "value_en": "American Express",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Apple Pay",
+    "value_en": "Apple Pay",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  },
+  {
+    "value": "Google Pay",
+    "value_en": "Google Pay",
+    "forexBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.PaymentMethod"
+  }
+]

@@ -1,11 +1,11 @@
 <div>
   <h2 id="page-heading" data-cy="CryptoBrokerHeading">
-    <span jhiTranslate="forexBeApp.cryptoBroker.home.title">Crypto Brokers</span>
+    <span jhiTranslate="kNetworkAdminApp.cryptoBroker.home.title">Crypto Brokers</span>
 
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
         <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
-        <span jhiTranslate="forexBeApp.cryptoBroker.home.refreshListLabel">Refresh list</span>
+        <span jhiTranslate="kNetworkAdminApp.cryptoBroker.home.refreshListLabel">Refresh list</span>
       </button>
 
       <button
@@ -15,7 +15,7 @@
         [routerLink]="['/crypto-broker/new']"
       >
         <fa-icon icon="plus"></fa-icon>
-        <span jhiTranslate="forexBeApp.cryptoBroker.home.createLabel">Create a new Crypto Broker</span>
+        <span jhiTranslate="kNetworkAdminApp.cryptoBroker.home.createLabel">Create a new Crypto Broker</span>
       </button>
     </div>
   </h2>
@@ -26,7 +26,7 @@
 
   @if (cryptoBrokers().length === 0) {
     <div class="alert alert-warning" id="no-result">
-      <span jhiTranslate="forexBeApp.cryptoBroker.home.notFound">No Crypto Brokers found</span>
+      <span jhiTranslate="kNetworkAdminApp.cryptoBroker.home.notFound">No Crypto Brokers found</span>
     </div>
   } @else {
     <div class="table-responsive table-entities" id="entities">
@@ -42,148 +42,169 @@
             </th>
             <th scope="col" jhiSortBy="name">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.name">Name</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.name">Name</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nameEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.nameEn">Name En</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="logo">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.logo">Logo</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.logo">Logo</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="url">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.url">Url</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.url">Url</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="description">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.description">Description</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.description">Description</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.descriptionEn">Description En</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="rating">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.rating">Rating</span>
-
-                <fa-icon class="p-1" icon="sort"></fa-icon>
-              </div>
-            </th>
-            <th scope="col" jhiSortBy="features">
-              <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.features">Features</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.rating">Rating</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="regulation">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.regulation">Regulation</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.regulation">Regulation</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="minDeposit">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.minDeposit">Min Deposit</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.minDeposit">Min Deposit</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="tradingFees">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.tradingFees">Trading Fees</span>
-
-                <fa-icon class="p-1" icon="sort"></fa-icon>
-              </div>
-            </th>
-            <th scope="col" jhiSortBy="supportedCoins">
-              <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.supportedCoins">Supported Coins</span>
-
-                <fa-icon class="p-1" icon="sort"></fa-icon>
-              </div>
-            </th>
-            <th scope="col" jhiSortBy="pros">
-              <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.pros">Pros</span>
-
-                <fa-icon class="p-1" icon="sort"></fa-icon>
-              </div>
-            </th>
-            <th scope="col" jhiSortBy="cons">
-              <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.cons">Cons</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.tradingFees">Trading Fees</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="founded">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.founded">Founded</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.founded">Founded</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="headquarters">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.headquarters">Headquarters</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.headquarters">Headquarters</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="headquartersEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.headquartersEn">Headquarters En</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="tradingVolume">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.tradingVolume">Trading Volume</span>
-
-                <fa-icon class="p-1" icon="sort"></fa-icon>
-              </div>
-            </th>
-            <th scope="col" jhiSortBy="securityFeatures">
-              <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.securityFeatures">Security Features</span>
-
-                <fa-icon class="p-1" icon="sort"></fa-icon>
-              </div>
-            </th>
-            <th scope="col" jhiSortBy="paymentMethods">
-              <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.paymentMethods">Payment Methods</span>
-
-                <fa-icon class="p-1" icon="sort"></fa-icon>
-              </div>
-            </th>
-            <th scope="col" jhiSortBy="customerSupport">
-              <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.customerSupport">Customer Support</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.tradingVolume">Trading Volume</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="mobileApp">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.mobileApp">Mobile App</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.mobileApp">Mobile App</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="apiSupport">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.apiSupport">Api Support</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.apiSupport">Api Support</span>
 
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
             <th scope="col" jhiSortBy="detailedDescription">
               <div class="d-flex">
-                <span jhiTranslate="forexBeApp.cryptoBroker.detailedDescription">Detailed Description</span>
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.detailedDescription">Detailed Description</span>
 
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="detailedDescriptionEn">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.detailedDescriptionEn">Detailed Description En</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cryptoFeatures.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoFeatures">Crypto Features</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="supportedCoins.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.supportedCoins">Supported Coins</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cryptoPros.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoPros">Crypto Pros</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cryptoCons.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.cryptoCons">Crypto Cons</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="securityFeatures.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.securityFeatures">Security Features</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="paymentMethods.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.paymentMethods">Payment Methods</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customerSupports.value">
+              <div class="d-flex">
+                <span jhiTranslate="kNetworkAdminApp.cryptoBroker.customerSupports">Customer Supports</span>
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
@@ -197,26 +218,87 @@
                 <a [routerLink]="['/crypto-broker', cryptoBroker.id, 'view']">{{ cryptoBroker.id }}</a>
               </td>
               <td>{{ cryptoBroker.name }}</td>
+              <td>{{ cryptoBroker.nameEn }}</td>
               <td>{{ cryptoBroker.logo }}</td>
               <td>{{ cryptoBroker.url }}</td>
               <td>{{ cryptoBroker.description }}</td>
+              <td>{{ cryptoBroker.descriptionEn }}</td>
               <td>{{ cryptoBroker.rating }}</td>
-              <td>{{ cryptoBroker.features }}</td>
               <td>{{ cryptoBroker.regulation }}</td>
               <td>{{ cryptoBroker.minDeposit }}</td>
               <td>{{ cryptoBroker.tradingFees }}</td>
-              <td>{{ cryptoBroker.supportedCoins }}</td>
-              <td>{{ cryptoBroker.pros }}</td>
-              <td>{{ cryptoBroker.cons }}</td>
               <td>{{ cryptoBroker.founded }}</td>
               <td>{{ cryptoBroker.headquarters }}</td>
+              <td>{{ cryptoBroker.headquartersEn }}</td>
               <td>{{ cryptoBroker.tradingVolume }}</td>
-              <td>{{ cryptoBroker.securityFeatures }}</td>
-              <td>{{ cryptoBroker.paymentMethods }}</td>
-              <td>{{ cryptoBroker.customerSupport }}</td>
               <td>{{ cryptoBroker.mobileApp }}</td>
               <td>{{ cryptoBroker.apiSupport }}</td>
               <td>{{ cryptoBroker.detailedDescription }}</td>
+              <td>{{ cryptoBroker.detailedDescriptionEn }}</td>
+              <td>
+                @for (cryptoFeatures of cryptoBroker.cryptoFeatures; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/crypto-feature', cryptoFeatures.id, 'view']">{{
+                      cryptoFeatures.value
+                    }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (supportedCoins of cryptoBroker.supportedCoins; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/coin', supportedCoins.id, 'view']">{{ supportedCoins.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (cryptoPros of cryptoBroker.cryptoPros; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/crypto-pro', cryptoPros.id, 'view']">{{ cryptoPros.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (cryptoCons of cryptoBroker.cryptoCons; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/crypto-con', cryptoCons.id, 'view']">{{ cryptoCons.value }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (securityFeatures of cryptoBroker.securityFeatures; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/security-feature', securityFeatures.id, 'view']">{{
+                      securityFeatures.value
+                    }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (paymentMethods of cryptoBroker.paymentMethods; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/crypto-payment-method', paymentMethods.id, 'view']">{{
+                      paymentMethods.value
+                    }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
+              <td>
+                @for (customerSupports of cryptoBroker.customerSupports; track $index; let last = $last) {
+                  <span>
+                    <a class="form-control-static" [routerLink]="['/customer-support', customerSupports.id, 'view']">{{
+                      customerSupports.value
+                    }}</a
+                    >{{ last ? '' : ', ' }}
+                  </span>
+                }
+              </td>
               <td class="text-end">
                 <div class="btn-group">
                   <a [routerLink]="['/crypto-broker', cryptoBroker.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">

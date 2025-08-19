@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cryptoPaymentMethod(); as cryptoPaymentMethodRef) {
+      <div>
+        <h2 data-cy="cryptoPaymentMethodDetailsHeading">
+          <span jhiTranslate="kNetworkAdminApp.cryptoPaymentMethod.detail.title">Crypto Payment Method</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cryptoPaymentMethodRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoPaymentMethod.value">Value</span></dt>
+          <dd>
+            <span>{{ cryptoPaymentMethodRef.value }}</span>
+          </dd>
+          <dt><span jhiTranslate="kNetworkAdminApp.cryptoPaymentMethod.valueEn">Value En</span></dt>
+          <dd>
+            <span>{{ cryptoPaymentMethodRef.valueEn }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/crypto-payment-method', cryptoPaymentMethodRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

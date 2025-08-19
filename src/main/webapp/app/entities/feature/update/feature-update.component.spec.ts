@@ -4,8 +4,6 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, from, of } from 'rxjs';
 
-import { IBroker } from 'app/entities/broker/broker.model';
-import { BrokerService } from 'app/entities/broker/service/broker.service';
 import { FeatureService } from '../service/feature.service';
 import { IFeature } from '../feature.model';
 import { FeatureFormService } from './feature-form.service';
@@ -18,7 +16,6 @@ describe('Feature Management Update Component', () => {
   let activatedRoute: ActivatedRoute;
   let featureFormService: FeatureFormService;
   let featureService: FeatureService;
-  let brokerService: BrokerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -41,43 +38,17 @@ describe('Feature Management Update Component', () => {
     activatedRoute = TestBed.inject(ActivatedRoute);
     featureFormService = TestBed.inject(FeatureFormService);
     featureService = TestBed.inject(FeatureService);
-    brokerService = TestBed.inject(BrokerService);
 
     comp = fixture.componentInstance;
   });
 
   describe('ngOnInit', () => {
-    it('Should call Broker query and add missing value', () => {
-      const feature: IFeature = { id: 'ba4d0840-41cd-4efd-ad24-9c999bab9ebb' };
-      const broker: IBroker = { id: '5f6e7bd8-e06b-4f58-bfff-3a911359eb01' };
-      feature.broker = broker;
-
-      const brokerCollection: IBroker[] = [{ id: '5f6e7bd8-e06b-4f58-bfff-3a911359eb01' }];
-      jest.spyOn(brokerService, 'query').mockReturnValue(of(new HttpResponse({ body: brokerCollection })));
-      const additionalBrokers = [broker];
-      const expectedCollection: IBroker[] = [...additionalBrokers, ...brokerCollection];
-      jest.spyOn(brokerService, 'addBrokerToCollectionIfMissing').mockReturnValue(expectedCollection);
-
-      activatedRoute.data = of({ feature });
-      comp.ngOnInit();
-
-      expect(brokerService.query).toHaveBeenCalled();
-      expect(brokerService.addBrokerToCollectionIfMissing).toHaveBeenCalledWith(
-        brokerCollection,
-        ...additionalBrokers.map(expect.objectContaining),
-      );
-      expect(comp.brokersSharedCollection).toEqual(expectedCollection);
-    });
-
     it('Should update editForm', () => {
       const feature: IFeature = { id: 'ba4d0840-41cd-4efd-ad24-9c999bab9ebb' };
-      const broker: IBroker = { id: '5f6e7bd8-e06b-4f58-bfff-3a911359eb01' };
-      feature.broker = broker;
 
       activatedRoute.data = of({ feature });
       comp.ngOnInit();
 
-      expect(comp.brokersSharedCollection).toContainEqual(broker);
       expect(comp.feature).toEqual(feature);
     });
   });
@@ -147,18 +118,6 @@ describe('Feature Management Update Component', () => {
       expect(featureService.update).toHaveBeenCalled();
       expect(comp.isSaving).toEqual(false);
       expect(comp.previousState).not.toHaveBeenCalled();
-    });
-  });
-
-  describe('Compare relationships', () => {
-    describe('compareBroker', () => {
-      it('Should forward to brokerService', () => {
-        const entity = { id: '5f6e7bd8-e06b-4f58-bfff-3a911359eb01' };
-        const entity2 = { id: '71abe793-642a-4ca6-a811-2bf9b91fef05' };
-        jest.spyOn(brokerService, 'compareBroker');
-        comp.compareBroker(entity, entity2);
-        expect(brokerService.compareBroker).toHaveBeenCalledWith(entity, entity2);
-      });
     });
   });
 });

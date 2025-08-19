@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "cryptoPaymentMethod": {
+      "home": {
+        "title": "Crypto Payment Methods",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Crypto Payment Method",
+        "createOrEditLabel": "Create or edit a Crypto Payment Method",
+        "notFound": "No Crypto Payment Methods found"
+      },
+      "created": "A new Crypto Payment Method is created with identifier {{ param }}",
+      "updated": "A Crypto Payment Method is updated with identifier {{ param }}",
+      "deleted": "A Crypto Payment Method is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Crypto Payment Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Crypto Payment Method"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kNetworkAdminApp": {
+    "coin": {
+      "home": {
+        "title": "Coins",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Coin",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Coin",
+        "notFound": "No Coins found"
+      },
+      "created": "Một Coin mới được tạo với định danh {{ param }}",
+      "updated": "Một Coin cập nhật với định danh {{ param }}",
+      "deleted": "Một Coin đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Coin {{ id }}?"
+      },
+      "detail": {
+        "title": "Coin"
+      },
+      "id": "ID",
+      "value": "Value",
+      "valueEn": "Value En",
+      "cryptoBrokers": "Crypto Brokers"
+    }
+  }
+}

@@ -1,0 +1,300 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-forex-broker-heading"
+        data-cy="ForexBrokerCreateUpdateHeading"
+        jhiTranslate="kNetworkAdminApp.forexBroker.home.createOrEditLabel"
+      >
+        Create or edit a Forex Broker
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="kNetworkAdminApp.forexBroker.id">ID</label>
+            <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        @let nameRef = editForm.get('name')!;
+        <div class="mb-3">
+          <label class="form-label" for="field_name" jhiTranslate="kNetworkAdminApp.forexBroker.name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+          @if (nameRef.invalid && (nameRef.dirty || nameRef.touched)) {
+            <div>
+              @if (editForm.get('name')?.errors?.required) {
+                <small class="form-text text-danger" jhiTranslate="entity.validation.required">This field is required.</small>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nameEn" jhiTranslate="kNetworkAdminApp.forexBroker.nameEn">Name En</label>
+          <input type="text" class="form-control" name="nameEn" id="field_nameEn" data-cy="nameEn" formControlName="nameEn" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_logo" jhiTranslate="kNetworkAdminApp.forexBroker.logo">Logo</label>
+          <input type="text" class="form-control" name="logo" id="field_logo" data-cy="logo" formControlName="logo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_url" jhiTranslate="kNetworkAdminApp.forexBroker.url">Url</label>
+          <input type="text" class="form-control" name="url" id="field_url" data-cy="url" formControlName="url" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_description" jhiTranslate="kNetworkAdminApp.forexBroker.description">Description</label>
+          <textarea
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_descriptionEn" jhiTranslate="kNetworkAdminApp.forexBroker.descriptionEn"
+            >Description En</label
+          >
+          <textarea
+            class="form-control"
+            name="descriptionEn"
+            id="field_descriptionEn"
+            data-cy="descriptionEn"
+            formControlName="descriptionEn"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_rating" jhiTranslate="kNetworkAdminApp.forexBroker.rating">Rating</label>
+          <input type="number" class="form-control" name="rating" id="field_rating" data-cy="rating" formControlName="rating" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_regulation" jhiTranslate="kNetworkAdminApp.forexBroker.regulation">Regulation</label>
+          <input
+            type="text"
+            class="form-control"
+            name="regulation"
+            id="field_regulation"
+            data-cy="regulation"
+            formControlName="regulation"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_minDeposit" jhiTranslate="kNetworkAdminApp.forexBroker.minDeposit">Min Deposit</label>
+          <input
+            type="text"
+            class="form-control"
+            name="minDeposit"
+            id="field_minDeposit"
+            data-cy="minDeposit"
+            formControlName="minDeposit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_spreads" jhiTranslate="kNetworkAdminApp.forexBroker.spreads">Spreads</label>
+          <input type="text" class="form-control" name="spreads" id="field_spreads" data-cy="spreads" formControlName="spreads" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_leverage" jhiTranslate="kNetworkAdminApp.forexBroker.leverage">Leverage</label>
+          <input type="text" class="form-control" name="leverage" id="field_leverage" data-cy="leverage" formControlName="leverage" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_founded" jhiTranslate="kNetworkAdminApp.forexBroker.founded">Founded</label>
+          <input type="text" class="form-control" name="founded" id="field_founded" data-cy="founded" formControlName="founded" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_headquarters" jhiTranslate="kNetworkAdminApp.forexBroker.headquarters">Headquarters</label>
+          <input
+            type="text"
+            class="form-control"
+            name="headquarters"
+            id="field_headquarters"
+            data-cy="headquarters"
+            formControlName="headquarters"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_headquartersEn" jhiTranslate="kNetworkAdminApp.forexBroker.headquartersEn"
+            >Headquarters En</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="headquartersEn"
+            id="field_headquartersEn"
+            data-cy="headquartersEn"
+            formControlName="headquartersEn"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexFeatures" jhiTranslate="kNetworkAdminApp.forexBroker.forexFeatures">Forex Features</label>
+          <select
+            class="form-control"
+            id="field_forexFeatures"
+            data-cy="forexFeatures"
+            multiple
+            name="forexFeatures"
+            formControlName="forexFeatures"
+            [compareWith]="compareFeature"
+          >
+            @for (featureOption of featuresSharedCollection; track $index) {
+              <option [ngValue]="featureOption">{{ featureOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexPlatforms" jhiTranslate="kNetworkAdminApp.forexBroker.forexPlatforms">Forex Platforms</label>
+          <select
+            class="form-control"
+            id="field_forexPlatforms"
+            data-cy="forexPlatforms"
+            multiple
+            name="forexPlatforms"
+            formControlName="forexPlatforms"
+            [compareWith]="comparePlatform"
+          >
+            @for (platformOption of platformsSharedCollection; track $index) {
+              <option [ngValue]="platformOption">{{ platformOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexInstruments" jhiTranslate="kNetworkAdminApp.forexBroker.forexInstruments">Forex Instruments</label>
+          <select
+            class="form-control"
+            id="field_forexInstruments"
+            data-cy="forexInstruments"
+            multiple
+            name="forexInstruments"
+            formControlName="forexInstruments"
+            [compareWith]="compareInstrument"
+          >
+            @for (instrumentOption of instrumentsSharedCollection; track $index) {
+              <option [ngValue]="instrumentOption">{{ instrumentOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexPros" jhiTranslate="kNetworkAdminApp.forexBroker.forexPros">Forex Pros</label>
+          <select
+            class="form-control"
+            id="field_forexPros"
+            data-cy="forexPros"
+            multiple
+            name="forexPros"
+            formControlName="forexPros"
+            [compareWith]="comparePro"
+          >
+            @for (proOption of prosSharedCollection; track $index) {
+              <option [ngValue]="proOption">{{ proOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexCons" jhiTranslate="kNetworkAdminApp.forexBroker.forexCons">Forex Cons</label>
+          <select
+            class="form-control"
+            id="field_forexCons"
+            data-cy="forexCons"
+            multiple
+            name="forexCons"
+            formControlName="forexCons"
+            [compareWith]="compareCon"
+          >
+            @for (conOption of consSharedCollection; track $index) {
+              <option [ngValue]="conOption">{{ conOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexLanguages" jhiTranslate="kNetworkAdminApp.forexBroker.forexLanguages">Forex Languages</label>
+          <select
+            class="form-control"
+            id="field_forexLanguages"
+            data-cy="forexLanguages"
+            multiple
+            name="forexLanguages"
+            formControlName="forexLanguages"
+            [compareWith]="compareLanguageSupport"
+          >
+            @for (languageSupportOption of languageSupportsSharedCollection; track $index) {
+              <option [ngValue]="languageSupportOption">{{ languageSupportOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexSupports" jhiTranslate="kNetworkAdminApp.forexBroker.forexSupports">Forex Supports</label>
+          <select
+            class="form-control"
+            id="field_forexSupports"
+            data-cy="forexSupports"
+            multiple
+            name="forexSupports"
+            formControlName="forexSupports"
+            [compareWith]="compareSupport"
+          >
+            @for (supportOption of supportsSharedCollection; track $index) {
+              <option [ngValue]="supportOption">{{ supportOption.value }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_forexPaymentMethods" jhiTranslate="kNetworkAdminApp.forexBroker.forexPaymentMethods"
+            >Forex Payment Methods</label
+          >
+          <select
+            class="form-control"
+            id="field_forexPaymentMethods"
+            data-cy="forexPaymentMethods"
+            multiple
+            name="forexPaymentMethods"
+            formControlName="forexPaymentMethods"
+            [compareWith]="comparePaymentMethod"
+          >
+            @for (paymentMethodOption of paymentMethodsSharedCollection; track $index) {
+              <option [ngValue]="paymentMethodOption">{{ paymentMethodOption.value }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

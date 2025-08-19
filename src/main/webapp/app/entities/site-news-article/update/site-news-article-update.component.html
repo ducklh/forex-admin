@@ -1,0 +1,166 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-site-news-article-heading"
+        data-cy="SiteNewsArticleCreateUpdateHeading"
+        jhiTranslate="kNetworkAdminApp.siteNewsArticle.home.createOrEditLabel"
+      >
+        Create or edit a Site News Article
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="kNetworkAdminApp.siteNewsArticle.id">ID</label>
+            <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        @let titleRef = editForm.get('title')!;
+        <div class="mb-3">
+          <label class="form-label" for="field_title" jhiTranslate="kNetworkAdminApp.siteNewsArticle.title">Title</label>
+          <input type="text" class="form-control" name="title" id="field_title" data-cy="title" formControlName="title" />
+          @if (titleRef.invalid && (titleRef.dirty || titleRef.touched)) {
+            <div>
+              @if (editForm.get('title')?.errors?.required) {
+                <small class="form-text text-danger" jhiTranslate="entity.validation.required">This field is required.</small>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_titleEn" jhiTranslate="kNetworkAdminApp.siteNewsArticle.titleEn">Title En</label>
+          <input type="text" class="form-control" name="titleEn" id="field_titleEn" data-cy="titleEn" formControlName="titleEn" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_excerpt" jhiTranslate="kNetworkAdminApp.siteNewsArticle.excerpt">Excerpt</label>
+          <input type="text" class="form-control" name="excerpt" id="field_excerpt" data-cy="excerpt" formControlName="excerpt" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_excerptEn" jhiTranslate="kNetworkAdminApp.siteNewsArticle.excerptEn">Excerpt En</label>
+          <input type="text" class="form-control" name="excerptEn" id="field_excerptEn" data-cy="excerptEn" formControlName="excerptEn" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_content" jhiTranslate="kNetworkAdminApp.siteNewsArticle.content">Content</label>
+          <textarea class="form-control" name="content" id="field_content" data-cy="content" formControlName="content"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_contentEn" jhiTranslate="kNetworkAdminApp.siteNewsArticle.contentEn">Content En</label>
+          <textarea class="form-control" name="contentEn" id="field_contentEn" data-cy="contentEn" formControlName="contentEn"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_category" jhiTranslate="kNetworkAdminApp.siteNewsArticle.category">Category</label>
+          <input type="text" class="form-control" name="category" id="field_category" data-cy="category" formControlName="category" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_categoryEn" jhiTranslate="kNetworkAdminApp.siteNewsArticle.categoryEn">Category En</label>
+          <input
+            type="text"
+            class="form-control"
+            name="categoryEn"
+            id="field_categoryEn"
+            data-cy="categoryEn"
+            formControlName="categoryEn"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_author" jhiTranslate="kNetworkAdminApp.siteNewsArticle.author">Author</label>
+          <input type="text" class="form-control" name="author" id="field_author" data-cy="author" formControlName="author" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_publishedAt" jhiTranslate="kNetworkAdminApp.siteNewsArticle.publishedAt">Published At</label>
+          <div class="d-flex">
+            <input
+              id="field_publishedAt"
+              data-cy="publishedAt"
+              type="datetime-local"
+              class="form-control"
+              name="publishedAt"
+              formControlName="publishedAt"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_readTime" jhiTranslate="kNetworkAdminApp.siteNewsArticle.readTime">Read Time</label>
+          <input type="text" class="form-control" name="readTime" id="field_readTime" data-cy="readTime" formControlName="readTime" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_image" jhiTranslate="kNetworkAdminApp.siteNewsArticle.image">Image</label>
+          <input type="text" class="form-control" name="image" id="field_image" data-cy="image" formControlName="image" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fullContent" jhiTranslate="kNetworkAdminApp.siteNewsArticle.fullContent">Full Content</label>
+          <textarea
+            class="form-control"
+            name="fullContent"
+            id="field_fullContent"
+            data-cy="fullContent"
+            formControlName="fullContent"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fullContentEn" jhiTranslate="kNetworkAdminApp.siteNewsArticle.fullContentEn"
+            >Full Content En</label
+          >
+          <textarea
+            class="form-control"
+            name="fullContentEn"
+            id="field_fullContentEn"
+            data-cy="fullContentEn"
+            formControlName="fullContentEn"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="field_tags" jhiTranslate="kNetworkAdminApp.siteNewsArticle.tags">Tags</label>
+          <select
+            class="form-control"
+            id="field_tags"
+            data-cy="tags"
+            multiple
+            name="tags"
+            formControlName="tags"
+            [compareWith]="compareTag"
+          >
+            @for (tagOption of tagsSharedCollection; track $index) {
+              <option [ngValue]="tagOption">{{ tagOption.value }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
