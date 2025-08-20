@@ -1,0 +1,86 @@
+[
+  {
+    "value": "Giao diện phức tạp cho người mới",
+    "value_en": "Complex interface for new users",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Một số quốc gia bị hạn chế",
+    "value_en": "Restricted in some countries",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Phí giao dịch cao hơn các sàn khác",
+    "value_en": "Higher trading fees than other exchanges",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Số lượng coin hỗ trợ hạn chế",
+    "value_en": "Limited number of supported coins",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Ít tính năng nâng cao",
+    "value_en": "Few advanced features",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Giao diện phức tạp",
+    "value_en": "Complex interface",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Thời gian xác minh tài khoản lâu",
+    "value_en": "Long account verification time",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Regulation yếu hơn",
+    "value_en": "Weaker regulation",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Hỗ trợ khách hàng chậm",
+    "value_en": "Slow customer support",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Không hỗ trợ tiếng Việt",
+    "value_en": "No Vietnamese support",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Regulation không rõ ràng",
+    "value_en": "Unclear regulation",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Ít coin spot trading",
+    "value_en": "Few spot trading coins",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Rủi ro cao với futures",
+    "value_en": "High risk with futures",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  },
+  {
+    "value": "Regulation yếu",
+    "value_en": "Weak regulation",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoCon"
+  }
+]

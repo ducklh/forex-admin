@@ -1,0 +1,38 @@
+[
+  {
+    "value": "Thẻ tín dụng/ghi nợ",
+    "value_en": "Credit/Debit card",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoPaymentMethod"
+  },
+  {
+    "value": "Chuyển khoản ngân hàng",
+    "value_en": "Bank transfer",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoPaymentMethod"
+  },
+  {
+    "value": "Giao dịch P2P",
+    "value_en": "P2P trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoPaymentMethod"
+  },
+  {
+    "value": "Chuyển khoản ngân hàng (ACH)",
+    "value_en": "Bank transfer (ACH)",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoPaymentMethod"
+  },
+  {
+    "value": "Chuyển khoản điện tử",
+    "value_en": "Wire transfer",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoPaymentMethod"
+  },
+  {
+    "value": "Chuyển khoản ngân hàng (SEPA)",
+    "value_en": "Bank transfer (SEPA)",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoPaymentMethod"
+  }
+]

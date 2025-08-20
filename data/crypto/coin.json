@@ -1,0 +1,122 @@
+[
+  {
+    "value": "Bitcoin",
+    "value_en": "Bitcoin",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Ethereum",
+    "value_en": "Ethereum",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "BNB",
+    "value_en": "BNB",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Cardano",
+    "value_en": "Cardano",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Solana",
+    "value_en": "Solana",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "XRP",
+    "value_en": "XRP",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Litecoin",
+    "value_en": "Litecoin",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Bitcoin Cash",
+    "value_en": "Bitcoin Cash",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Ethereum Classic",
+    "value_en": "Ethereum Classic",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Polkadot",
+    "value_en": "Polkadot",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Ripple",
+    "value_en": "Ripple",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Chainlink",
+    "value_en": "Chainlink",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Uniswap",
+    "value_en": "Uniswap",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Tezos",
+    "value_en": "Tezos",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "KuCoin Token",
+    "value_en": "KuCoin Token",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Tether",
+    "value_en": "Tether",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "OKB",
+    "value_en": "OKB",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Polygon",
+    "value_en": "Polygon",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Gate Token",
+    "value_en": "Gate Token",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  },
+  {
+    "value": "Huobi Token",
+    "value_en": "Huobi Token",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.Coin"
+  }
+]

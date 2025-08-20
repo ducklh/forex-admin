@@ -1,0 +1,32 @@
+[
+  {
+    "value": "Hỗ trợ trò chuyện trực tuyến 24/7",
+    "value_en": "24/7 Live chat support",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CustomerSupport"
+  },
+  {
+    "value": "Hỗ trợ qua email",
+    "value_en": "Email support",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CustomerSupport"
+  },
+  {
+    "value": "Trung tâm trợ giúp",
+    "value_en": "Help center",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CustomerSupport"
+  },
+  {
+    "value": "Hỗ trợ qua điện thoại",
+    "value_en": "Phone support",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CustomerSupport"
+  },
+  {
+    "value": "Hỗ trợ trò chuyện trực tuyến",
+    "value_en": "Live chat support",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CustomerSupport"
+  }
+]

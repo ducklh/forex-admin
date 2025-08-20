@@ -1,0 +1,140 @@
+[
+  {
+    "value": "Giao dịch spot",
+    "value_en": "Spot trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Futures",
+    "value_en": "Futures",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Staking",
+    "value_en": "Staking",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Launchpad",
+    "value_en": "Launchpad",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Giao dịch đơn giản",
+    "value_en": "Simple trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Ví tích hợp",
+    "value_en": "Integrated wallet",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Earn rewards",
+    "value_en": "Earn rewards",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Pro trading",
+    "value_en": "Pro trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Bảo mật cao",
+    "value_en": "High security",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Margin trading",
+    "value_en": "Margin trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Altcoin trading",
+    "value_en": "Altcoin trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "KuCoin Earn",
+    "value_en": "KuCoin Earn",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Trading bots",
+    "value_en": "Trading bots",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "P2P trading",
+    "value_en": "P2P trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Options",
+    "value_en": "Options",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "DeFi",
+    "value_en": "DeFi",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "NFT",
+    "value_en": "NFT",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Futures trading",
+    "value_en": "Futures trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Copy trading",
+    "value_en": "Copy trading",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Đa dạng coin",
+    "value_en": "Diverse coins",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "HODL & Earn",
+    "value_en": "HODL & Earn",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Startup",
+    "value_en": "Startup",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  },
+  {
+    "value": "Liquidity mining",
+    "value_en": "Liquidity mining",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.CryptoFeature"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "value": "98% tài sản được lưu trữ ngoại tuyến",
+    "value_en": "98% assets stored offline",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Bảo hiểm FDIC",
+    "value_en": "FDIC insurance",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Bảo mật đa lớp",
+    "value_en": "Multi-layer security",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Công nghệ đa chữ ký",
+    "value_en": "Multi-signature technology",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Giám sát thời gian thực",
+    "value_en": "Real-time monitoring",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Lưu trữ lạnh",
+    "value_en": "Cold storage",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Lưu trữ lạnh 95%",
+    "value_en": "95% cold storage",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Mã hóa nâng cao",
+    "value_en": "Advanced encryption",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Quỹ SAFU",
+    "value_en": "SAFU fund",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Xác thực hai yếu tố",
+    "value_en": "Two-factor authentication",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  },
+  {
+    "value": "Xác thực hai yếu tố (2FA)",
+    "value_en": "Two-factor authentication (2FA)",
+    "cryptoBrokers": [],
+    "_class": "com.actionnow.knetwork.domain.SecurityFeature"
+  }
+]
