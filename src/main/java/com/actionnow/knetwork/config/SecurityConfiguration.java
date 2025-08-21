@@ -45,7 +45,7 @@ public class SecurityConfiguration {
             .cors(cors ->
                 cors.configurationSource(request -> {
                     CorsConfiguration config = new CorsConfiguration();
-                    config.setAllowedOrigins(List.of("http://localhost:3000", "http://localhost:9000"));
+                    config.setAllowedOrigins(List.of("http://localhost:3000", "https://k-network.io"));
                     config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     config.setAllowedHeaders(List.of("*"));
                     config.setAllowCredentials(true);
